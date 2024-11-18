@@ -1,0 +1,99 @@
+.tweet-container {
+    padding: 35px 50px;
+    width: 1000px;
+    height: auto;
+    border-radius: 12px;
+    margin: 30px auto;
+    background-color: #000000;
+    font-size: 30px;
+}
+
+.tweet-header {
+    display: flex;
+    align-items: center;
+    color: #ced0d1;
+}
+
+#logo {
+    width: 95px;
+    height: 95px;
+    border-radius: 100%;
+    margin-right: 20px;
+}
+
+.name {
+    font-size: 37px;
+    font-weight: bold;
+}
+
+.frase {
+    margin-top: 10px;
+    color: #ced0d1;
+    font-size: 37px;
+}
+
+.hashtags {
+    margin-top: 20px;
+    color: #4a99e9;
+    font-size: 37px;
+}
+
+.tweet-date {
+    color: #6b6f73;
+    font-size: 22px;
+}
+
+.like {
+    display: flex;
+    color: #6b6f73;
+    font-size: 20px;
+}
+
+#like {
+    margin-left: 10px;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding: 0 100px;
+}
+
+#icons{
+    height: 45px;
+}
+
+.action-item {
+    display: flex;
+    justify-content: center;
+    width: 70px;
+    height: 45px;
+}
+
+hr.separator {
+    border: none;
+    border-top: 1px solid #6b6f73;
+    margin: 20px 0;
+}
+
+.colorc {
+    color: #4a99e9;
+}
+
+.save {
+    display: flex;
+    justify-content: center;
+}
+
+#save {
+    height: 50px;
+    background-color: var(--background-color-white);
+}
+
+#click {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}

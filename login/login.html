@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="../index.html">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content-logo">
+            <img src="../assets/logos/Logo.jpg" alt="" id="logo">
+            <p class="company">Company</p>
+        </div>
+        <form action="/" class="form">
+            <label for="correo" class="label">Ingresa tu correo:</label>
+
+            <input type="text" placeholder="usuario@example.com" id="email" class="input input-correo">
+
+            <label for="password" class="label">Ingresa tu contraseña</label>
+
+            <input type="password" placeholder="**********" id="passwoard" class="input input-passwoard">
+
+            <input type="submit" value="Iniciar Sesión" class="button-primary">
+            <a href="/" id="recovery">Olvidaste tu contraseña</a>
+        </form>
+
+        <a href="register.html" class="button-secondary">Crear Cuenta</a>
+        <a href="../index.html" class="home active">Inicio</a>
+    </div>
+</body>
+</html>

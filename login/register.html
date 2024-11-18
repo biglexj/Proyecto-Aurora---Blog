@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="../index.html">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content-logo">
+            <img src="../assets/logos/Logo.jpg" alt="" id="logo">
+            <p class="company">Company</p>
+        </div>
+        <form action="/" class="form">
+            <label for="Name" class="label">Nombre/s</label>
+            <input type="name" id="name" class="input input-name" >
+
+            <label for="apellidos" class="label">Apellidos</label>
+            <input type="apellidos" id="apellidos" class="input input-apellidos">
+
+            <label for="user" class="label">Usuario</label>
+            <input type="usuario" placeholder="@biglexj" id="user" class="input input-user">
+
+            <label for="correo" class="label">Ingresa tu correo:</label>
+            <input type="text" placeholder="usuario@example.com" id="email" class="input input-correo">
+
+            <label for="password" class="label">Ingresa tu contraseña</label>
+            <input type="password" placeholder="**********" id="passwoard" class="input input-passwoard">
+
+            <input type="submit" value="Iniciar Sesión" class="button-primary">
+            <a href="/" id="recovery">Olvidaste tu contraseña</a>
+        </form>
+
+        <a href="login.html" class="button-secondary">Iniciar Sesión</a>        
+        <a href="../index.html" class="home active">Inicio</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+.social-links {
+    background-color: var(--primary-color-green);
+    padding: 25px 0;
+}
+
+.social-links h3 {
+    margin: 0 0 24px 0;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icon {
+    height: 40px;
+    width: 40px;
+    margin: 0 10px;
+}
+
+#social-icon {
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+}

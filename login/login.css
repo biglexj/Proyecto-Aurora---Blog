@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    background-color: var(--primary-color-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.container {
+    background-color: var(--primary-color-pink);
+    height: 600px;
+    width: 400px;
+    padding: 2%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-logo {
+    display: flex;
+    align-items: center;
+    margin: 0 0 10px 0;
+    width: 350px;
+}
+
+#logo {
+    height: 50px;
+    border-radius: 100%;
+}
+
+.company {
+    font-size: 25px;
+    margin: 0 0 0 5px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    
+    width: 350px;
+}
+
+.label {
+    display: flex;
+    align-items: center;
+    color: var(--text-color-dark);
+    padding: 0 10px;
+    font-size: 20px;
+    height: 39px;
+    text-align: end;
+}
+
+.input {
+    border: none;
+    height: 25px;
+    padding: 7px 10px;
+    border-radius: 10px;
+    background-color: var(--text-imput-field);
+}
+
+.button-primary {
+    height: 39px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--text-imput-field);
+    background-color: var(--hospital-gren);
+}
+
+#recovery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 39px;
+    text-decoration: none;
+    text-align: center;
+    color: var(--text-color-dark);
+    font-size: 15px;
+}
+
+.button-secondary {
+    height: 39px;
+    width: 350px;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid var(--text-color-dark);
+    padding: 0;
+    background-color: transparent;
+    text-decoration: none;
+    color: var(--text-color-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.home {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 39px;
+    text-decoration: none;
+    text-align: center;
+    color: var(--text-color-dark);
+    font-size: 18px;
+}

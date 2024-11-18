@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificación de Colores</title>
+    <style>
+        :root {
+            /* Colores sólidos */
+            --background-color-white: #F5F5F5;
+            --background-color-dark: #333333;
+
+            /* Degradado entre los colores verde y rosa */
+            --background-gradient-horizontal: linear-gradient(to right, #a1d8d8, #ffb8cc); /* Verde suave y rosa claro */
+            --background-gradient-diagonal: linear-gradient(to bottom right, #a1d8d8, #ffb8cc); /* Degradado diagonal */
+            --background-gradient-smooth: linear-gradient(to right, #a1d8d8, #FFFFFF, #ffb8cc); /* Suavización entre verde, blanco y rosa claro */
+
+            /* Degradado entre los colores verde y rosa para modo oscuro */
+            --background-gradient-horizontal-dark: linear-gradient(to right, #4f6a6a, #9b3d53); /* Verde oscuro y rosa oscuro */
+            --background-gradient-diagonal-dark: linear-gradient(to bottom right, #4f6a6a, #9b3d53); /* Degradado diagonal con tonos más apagados */
+            --background-gradient-smooth-dark: linear-gradient(to right, #4f6a6a, #333333, #9b3d53); /* Suavización entre verde oscuro, gris y rosa oscuro */
+
+            --text-color-white: #F5F5F5;
+            --text-color-black: #000000;
+            --text-color-dark: #333333;
+            --text-imput-field: #F7F7F7;
+
+            --accent-color-pink: #FFB6C1;
+            --accent-color-green: #ecffb6;
+
+            --very-light-pink: #e6e5e5;
+            --hospital-green: #ACD9B2;
+
+            --white: #FFFFFF;
+            --black: #000000;
+            --dark: #232830;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color-dark);
+            color: var(--text-color-white);
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .box {
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .color-box {
+            height: 200px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            font-size: 16px;
+            color: #fff;
+        }
+
+        .color-box .color-name {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .color-box .color-variable {
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        .background-white { background-color: var(--background-color-white); }
+        .background-dark { background-color: var(--background-color-dark); }
+        .accent-pink { background-color: var(--accent-color-pink); }
+        .accent-green { background-color: var(--accent-color-green); }
+        .very-light-pink { background-color: var(--very-light-pink); }
+        .hospital-green { background-color: var(--hospital-green); }
+        .white { background-color: var(--white); }
+        .black { background-color: var(--black); }
+        .dark { background-color: var(--dark); }
+        .background-gradient-horizontal { background: var(--background-gradient-horizontal); }
+        .background-gradient-diagonal { background: var(--background-gradient-diagonal); }
+        .background-gradient-smooth { background: var(--background-gradient-smooth); }
+        .background-gradient-horizontal-dark { background: var(--background-gradient-horizontal-dark); }
+        .background-gradient-diagonal-dark { background: var(--background-gradient-diagonal-dark); }
+        .background-gradient-smooth-dark { background: var(--background-gradient-smooth-dark); }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Cuadro de color -->
+         <div class="box">
+            <div class="color-box background-white"></div>
+            <div class="color-name">Blanco</div>
+            <div class="color-variable">--background-color-white</div>
+         </div>
+
+        <div class="color-box background-dark">
+            <div class="color-name">Oscuro</div>
+            <div class="color-variable">--background-color-dark</div>
+        </div>
+
+        <div class="color-box accent-pink">
+            <div class="color-name">Rosa Acento</div>
+            <div class="color-variable">--accent-color-pink</div>
+        </div>
+
+        <div class="color-box accent-green">
+            <div class="color-name">Verde Acento</div>
+            <div class="color-variable">--accent-color-green</div>
+        </div>
+
+        <div class="color-box very-light-pink">
+            <div class="color-name">Rosa Muy Claro</div>
+            <div class="color-variable">--very-light-pink</div>
+        </div>
+
+        <div class="color-box hospital-green">
+            <div class="color-name">Verde Hospital</div>
+            <div class="color-variable">--hospital-green</div>
+        </div>
+
+        <div class="color-box white">
+            <div class="color-name">Blanco</div>
+            <div class="color-variable">--white</div>
+        </div>
+
+        <div class="color-box black">
+            <div class="color-name">Negro</div>
+            <div class="color-variable">--black</div>
+        </div>
+
+        <div class="color-box dark">
+            <div class="color-name">Oscuro</div>
+            <div class="color-variable">--dark</div>
+        </div>
+
+        <!-- Degradados -->
+        <div class="color-box background-gradient-horizontal">
+            <div class="color-name">Degradado Horizontal</div>
+            <div class="color-variable">--background-gradient-horizontal</div>
+        </div>
+
+        <div class="color-box background-gradient-diagonal">
+            <div class="color-name">Degradado Diagonal</div>
+            <div class="color-variable">--background-gradient-diagonal</div>
+        </div>
+
+        <div class="color-box background-gradient-smooth">
+            <div class="color-name">Degradado Suavizado</div>
+            <div class="color-variable">--background-gradient-smooth</div>
+        </div>
+
+        <div class="color-box background-gradient-horizontal-dark">
+            <div class="color-name">Degradado Horizontal Oscuro</div>
+            <div class="color-variable">--background-gradient-horizontal-dark</div>
+        </div>
+
+        <div class="color-box background-gradient-diagonal-dark">
+            <div class="color-name">Degradado Diagonal Oscuro</div>
+            <div class="color-variable">--background-gradient-diagonal-dark</div>
+        </div>
+
+        <div class="color-box background-gradient-smooth-dark">
+            <div class="color-name">Degradado Suavizado Oscuro</div>
+            <div class="color-variable">--background-gradient-smooth-dark</div>
+        </div>
+    </div>
+
+</body>
+</html>

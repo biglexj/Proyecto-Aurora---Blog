@@ -1,0 +1,76 @@
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    background-color: var(--primary-color-pink);
+    padding: 4%;
+}
+
+.banner-content-bjp {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-bjp {
+    width: 42%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+#logo-sencondary {
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 30px;
+    background-color: var(--desaturated-color-pink);
+}
+
+.box {
+    background-color: var(--background-color-white);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 55vh;
+    border: 1px solid var(--text-color-dark);
+    background-color: var(--desaturated-color-green);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.genero {
+    font-size: 30px;
+    margin: 10px 0 10px 0;
+}
+
+.title {
+    margin: 10px 0 5px 0;
+    font-size: 20px;
+}
+
+.videos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+video-box {
+    padding-top: 56.25%;
+    position: relative;
+}
+
+.video-box video {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}

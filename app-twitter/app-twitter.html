@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Twitter</title>
+    <link rel="stylesheet" href="../index.html">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="app-twitter.css">
+    <link rel="stylesheet" href="app-twitter.js">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="../assets/logos/Logo.jpg" alt="Logo" id="logo-bar">
+            </div>
+            <h1 class="page-title">Twitter Desing</h1>
+            <nav class="tabs">
+                <a href="../index.html" class="tab active1">Inicio</a>
+                <a href="../services/services.html" class="tab active2">Servicios</a>
+                <a href="../bj-producciones/bj-producciones.html" class="tab active3">BJ Producciones</a>
+                <a href="../script-color/script-color.html" class="tab active4">Generar Color Pastel</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="tweet-container">
+        <div class="tweet-header">
+            <img src="../assets/logos/Logo.jpg" alt="Logo principal" id="logo">
+    
+            <div>
+                <div class="name" contenteditable="true" onpaste="handlePaste(event)">Biglex J</div>
+        
+                <div class="username" contenteditable="true" onpaste="handlePaste(event)">@biglexj</div>
+            </div>
+    
+        </div>
+    
+    
+        <div class="frase" contenteditable="true" onpaste="handlePaste(event)">
+            El amor es como el WiFi, a veces fuerte y estable, otras veces un poco inestable pero igualmente importante. ❤️📶
+        </div>
+    
+        <div class="hashtags" contenteditable="true" onpaste="handlePaste(event)">
+            #BiglexJ #Anime #Frases #Amor #Vida #Juego #Filosofía
+        </div>
+    
+        <hr class="separator">
+    
+        <div class="tweet-date" id="tweet-date"></div>
+        
+        <hr class="separator">
+    
+        <div class="like">
+            <div id="cantidad" contenteditable="true" onpaste="handlePaste(event)">
+                199
+            </div>
+    
+            <div id="like">
+                Me gusta
+            </div>
+        </div>
+    
+        <hr class="separator">
+    
+        <div class="actions">
+            <div class="action-item">
+                <img src="../assets/icons/Comentario.svg" alt="Comentarios" id="icons">
+            </div>
+    
+            <div class="action-item">
+                <img src="../assets/icons/Retuit.svg" alt="Retuit" id="icons">
+            </div>
+    
+            <div class="action-item">
+                <img src="../assets/icons/Corazón-2.svg" alt="Corazón" id="icons" id="colorc">
+            </div>
+    
+            <div class="action-item">
+                <img src="../assets/icons/Guardar.svg" alt="Guardar" id="icons">
+            </div>
+    
+            <div class="action-item">
+                <img src="../assets/icons/Compartir.svg" alt="Compartir" id="icons">
+            </div>
+        </div>
+    </div>
+    
+    <div class="save">
+        <button id="click" onclick="captureAndSave()">
+            <img src="../assets/icons/Descargar.png" alt="Guardar" id="save">
+        </button>
+    </div>
+
+        <!-- Script para formatear la fecha y hora -->
+        <script src="app-twitter.js"></script>
+</body>
+</html>
