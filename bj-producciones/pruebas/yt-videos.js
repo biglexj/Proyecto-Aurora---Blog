@@ -1,8 +1,12 @@
 //const API_KEY = 'AIzaSyDsq3L6w2KSivTcwRicK88wzHIKjwaaYis';
 const CHANNEL_ID = "UCBcDgxG2xaoOUEOBlNbc87A" //biglexpe
+//const CHANNEL_ID = "UCoj-UCDvKJC3TKahIJMdVcg4EBPw" //biglexstore
+//const CHANNEL_ID = "UCoj-UCULNuHQuQp96MF6vwhLv8nw" //biglexml
 //const CHANNEL_ID = "UCoj-c4Iv3EGrdV9sj5G4QSw" //biglexbro
 //const CHANNEL_ID = 'UC2CZ812lM70cjF8vukJ85ew'; //biglexj
 //const CHANNEL_ID = "UCfnZ7DrHm6ALN150xMpc0Og" //biglexdev
+//const CHANNEL_ID = "UC0jALmu73gyVeqRiMNaXlPA" //sondehonoria
+
 const YOUTUBE_API_URL = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet&order=date&maxResults=5`;
 
 fetch(YOUTUBE_API_URL)
