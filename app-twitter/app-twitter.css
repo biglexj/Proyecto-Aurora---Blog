@@ -2,9 +2,9 @@
     padding: 35px 50px;
     width: 1000px;
     height: auto;
-    border-radius: 12px;
+    border-radius: 13px;
     margin: 30px auto;
-    background-color: #000000;
+    background-color: black;
     font-size: 30px;
 }
 
@@ -53,6 +53,12 @@
     margin-left: 10px;
 }
 
+hr.separator {
+    border: none;
+    border-top: 1px solid #6b6f73;
+    margin: 20px 0;
+}
+
 .actions {
     display: flex;
     align-items: center;
@@ -61,39 +67,77 @@
     padding: 0 100px;
 }
 
-.icons{
+.icon {
+    fill: #71767b;
     height: 45px;
+    cursor: pointer;
+    transition: fill 0.2s ease-in-out;
 }
 
-.action-item {
+.icon.active {
+    fill: #f91880;
+  }
+
+#comment:hover {
+    fill: #1d9bf0;
+}
+
+#retuit:hover {
+    fill: #00ba7c;
+}
+
+#heart-outline path {
+    fill: #71767b;
+}
+#heart-outline:hover path {
+    fill: #f91880;
+}
+
+#heart-filled path {
+    fill: #f91880;
+    stroke: #f91880;
+    transition: fill 0.3s, stroke 0.3s;
+}
+
+#heart-filled:hover path {
+    fill: #f91880;
+    stroke: #f91880;
+}
+
+#save-filled:hover path {
+    fill: #FFA07A;
+    stroke: #FFA07A;
+}
+
+#save-outline path {
+    fill: #71767b;
+}
+#save-outline:hover path {
+    fill: #FFA07A;
+}
+
+#save-filled path {
+    fill: #FFA07A;
+    stroke: #FFA07A;
+    transition: fill 0.3s, stroke 0.3s;
+}
+
+#share:hover {
+    fill: #9370DB;
+}
+
+
+.download {
     display: flex;
     justify-content: center;
-    width: 70px;
-    height: 45px;
-}
-
-hr.separator {
-    border: none;
-    border-top: 1px solid #6b6f73;
-    margin: 20px 0;
-}
-
-.colorc {
-    color: #4a99e9;
-}
-
-.save {
-    display: flex;
-    justify-content: center;
-}
-
-#save {
-    height: 50px;
-    background-color: var(--background-color-white);
 }
 
 #click {
     background-color: transparent;
     border: none;
     padding: 0;
+}
+
+#keep {
+    height: 50px;
 }
