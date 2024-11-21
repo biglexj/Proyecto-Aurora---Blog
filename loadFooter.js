@@ -1,7 +1,7 @@
 // Archivo: loadFooter.js
 
 document.addEventListener("DOMContentLoaded", function() {
-    fetch("social-links/social-links.html") // Ajusta la ruta si es necesario
+    fetch("social-links/social-links.html") // Ajusta la ruta si ebs necesario
         .then(response => {
             if (!response.ok) {
                 throw new Error("Error al cargar el footer");
