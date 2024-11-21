@@ -1,5 +1,3 @@
-// Archivo: loadFooter.js
-
 document.addEventListener("DOMContentLoaded", function() {
     fetch("social-links/social-links.html") // Ajusta la ruta si ebs necesario
         .then(response => {
