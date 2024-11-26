@@ -313,13 +313,6 @@ main {
     background-color: var(--desaturated-color-green);
 }
 
-@media (max-width: 720px) {
-    .header-content {
-        padding: 5px 10px;
-    }
-}
-
-
 #logo-bar {
     width: 45px;
     height: 45px;
@@ -374,12 +367,6 @@ main {
     }
 }
 
-@media (max-width: 720px) {
-    .banner {
-        height: 10vh;
-    }
-}
-
 .banner-content {
     width: 45%;
     display: flex;
@@ -390,12 +377,6 @@ main {
 @media (max-width: 1080px) {
     .banner {
         height: 20vh;
-    }
-}
-
-@media (max-width: 720px) {
-    .banner {
-        height: 14vh;
     }
 }
 
@@ -443,12 +424,6 @@ main {
     color: white;
 }
 
-.banner-2 {
-    width: 100%;
-    padding: 4% 0;
-    border-radius: 20px;
-}
-
 .content-2 {
     width: 45%;
     display: flex;
@@ -480,6 +455,12 @@ main {
     border-radius: 20pX;
     overflow: hidden;
     margin-top: 20px;
+}
+
+@media (max-width: 1080px) {
+    .banner-2 {
+        height: 20vh;
+    }
 }
 
 .banner-content-2 {

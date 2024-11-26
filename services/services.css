@@ -20,12 +20,6 @@ main {
     }
 }
 
-@media (max-width: 720px) {
-    .banner-s {
-        height: 14vh;
-    }
-}
-
 .banner-content-s {
     width: 45%;
     display: flex;

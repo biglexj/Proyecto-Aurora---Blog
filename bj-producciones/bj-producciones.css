@@ -21,12 +21,6 @@ main {
     }
 }
 
-@media (max-width: 720px) {
-    .bannerbjp {
-        height: 14vh;
-    }
-}
-
 .banner-content-bjp {
     width: 55%;
     display: flex;
@@ -112,12 +106,6 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 1080px) {
-    .box {
-      flex: 1 1 calc(100% - 20px); /* Una columna en pantallas pequeñas */
-    }
-  }
-
 .genero {
     font-size: 30px;
     margin: 8px 0;
@@ -130,6 +118,12 @@ main {
     gap: 20px;
     align-content: space-between;
     justify-content: space-between;
+}
+
+@media (max-width: 1080px) {
+    .videos {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .title-wrapper {
