@@ -313,6 +313,13 @@ main {
     background-color: var(--desaturated-color-green);
 }
 
+@media (max-width: 720px) {
+    .header-content {
+        padding: 5px 10px;
+    }
+}
+
+
 #logo-bar {
     width: 45px;
     height: 45px;
@@ -363,13 +370,13 @@ main {
 
 @media (max-width: 1080px) {
     .banner {
-        height: 20vh;
+        height: 15vh;
     }
 }
 
 @media (max-width: 720px) {
     .banner {
-        height: 14vh;
+        height: 10vh;
     }
 }
 
@@ -378,7 +385,18 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
 
+@media (max-width: 1080px) {
+    .banner {
+        height: 20vh;
+    }
+}
+
+@media (max-width: 720px) {
+    .banner {
+        height: 14vh;
+    }
 }
 
 .banner-img {
