@@ -1,6 +1,7 @@
 .social-links {
     background-color: var(--primary-color-green);
     padding: 25px 0;
+    border-radius: 20px;
 }
 
 .social-links h3 {

@@ -1,8 +1,14 @@
+main {
+    background-color: transparent;
+    max-width: 1400px;
+    width: 100%;
+}
+
 .graphic-container {
     margin: 0 auto;
     padding: 3rem 10rem;
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     background-color: var(--desaturated-color-pink);
 }

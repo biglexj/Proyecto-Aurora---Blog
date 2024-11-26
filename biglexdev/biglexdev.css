@@ -1,3 +1,7 @@
+main {
+    background-color: transparent;
+    max-width: 1400px;
+}
 
 .banner-dev {
     display: flex;
@@ -6,6 +10,20 @@
     height: 40vh;
     background-color: var(--primary-color-pink);
     padding: 4%;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+@media (max-width: 1080px) {
+    .banner-dev {
+        height: 20vh;
+    }
+}
+
+@media (max-width: 720px) {
+    .banner-dev {
+        height: 14vh;
+    }
 }
 
 .banner-content-dev {
@@ -45,4 +63,5 @@
 iframe {
     width: 100%;
     border: none;
+    margin-top: 20px;
 }

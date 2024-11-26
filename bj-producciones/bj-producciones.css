@@ -1,3 +1,8 @@
+main {
+    background-color: transparent;
+    max-width: 1400px;
+}
+
 .banner-bjp {
     display: flex;
     justify-content: space-between;
@@ -5,6 +10,21 @@
     height: auto;
     background-color: var(--primary-color-pink);
     padding: 4%;
+    margin-top: 20px;
+    border-radius: 20px;
+    height: 40vh;
+}
+
+@media (max-width: 1080px) {
+    .banner-bjp {
+        height: 20vh;
+    }
+}
+
+@media (max-width: 720px) {
+    .bannerbjp {
+        height: 14vh;
+    }
 }
 
 .banner-content-bjp {
@@ -19,6 +39,7 @@
     margin: 0;
     font-size: 30px;
     font-weight: bold;
+    text-align: center;
 }
 
 .content-text {
@@ -73,33 +94,39 @@
 }
 
 .videosContainer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
     gap: 20px;
-    padding: 30px 25px;
-    background-color: var(--desaturated-color-pink);
+    margin-top: 20px;
 }
 
 .box {
-    padding: 20px;
-    border-radius: 10px;
+    flex: 1 1 calc(50% - 20px); /* Dos columnas con espacio de gap */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    height: auto;
+    /* Tus estilos existentes */
+    padding: 20px;
+    border-radius: 10px;
     background-color: var(--desaturated-color-green);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
 }
+
+@media (max-width: 1080px) {
+    .box {
+      flex: 1 1 calc(100% - 20px); /* Una columna en pantallas pequeñas */
+    }
+  }
 
 .genero {
     font-size: 30px;
     margin: 8px 0;
+    text-align: center;
 }
 
 .videos {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     align-content: space-between;
     justify-content: space-between;
@@ -118,16 +145,57 @@
 }
 
 .video-box {
-    position: relative;
     width: 100%;
-    padding-top: 56.25%;
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* Proporción de aspecto 16:9 */
+    border-radius: 10px;
 }
 
-iframe {
+.video-thumbnail,
+.video-box iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 5px;
+    object-fit: cover;
+}
+
+.video-thumbnail {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-thumbnail:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.video-box iframe {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.video-box iframe.loaded {
+    opacity: 1;
+}
+
+/* Estilos para el loader (spinner) */
+.loader {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    border: 6px solid #f3f3f3; /* Color de fondo */
+    border-top: 6px solid #555; /* Color del borde animado */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+/* Animación del spinner */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }

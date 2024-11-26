@@ -12,52 +12,54 @@
     <script src="biglexdev.js"></script>
 </head>
 <body>
-    <header class="header">
-        <div class="header-content">
-            <div class="logo">
-                <img src="../assets/Marca/Logo.jpg" alt="Logo" id="logo-bar">
+    <main>
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="../assets/Marca/Logo.jpg" alt="Logo" id="logo-bar">
+                </div>
+                <h1 class="page-title">Desarrollo</h1>
+                <nav class="tabs">
+                    <a href="../index.html" class="tab active1">Inicio</a>
+                    <a href="../bj-producciones/bj-producciones.html" class="tab active2">BJ Producciones</a>
+                    <a href="../services/services.html" class="tab active3">Servicios</a>
+                </nav>
             </div>
-            <h1 class="page-title">Desarrollo</h1>
-            <nav class="tabs">
-                <a href="../index.html" class="tab active1">Inicio</a>
-                <a href="../bj-producciones/bj-producciones.html" class="tab active2">BJ Producciones</a>
-                <a href="../services/services.html" class="tab active3">Servicios</a>
-            </nav>
+        </header>
+
+        <section class="banner-dev">
+            <div class="banner-content-dev">
+                <h2 class="title-principal-dev">
+                    Todo el Desarrollo en un Solo Lugar
+                </h2>
+                <p class="content-principal-dev">
+                    Ofrecemos desarrollo web personalizado para proyectos únicos. Creamos páginas estáticas con HTML, CSS y JavaScript, diseñadas para destacar y adaptarse a tus necesidades. ¡Lleva tu presencia online al siguiente nivel con soluciones modernas y funcionales!
+                </p>
+            </div>
+            <div class="banner-img-dev">
+                <img src="../assets/Marca/biglexdev/Logo 1.0.png" alt="Perfil" id="banner-img-dev">
+            </div>
+        </section>
+        <div class="graphic-design">
+            <iframe src="app-twitter/app-twitter.html" frameborder="0" id="graphic-design"></iframe>
         </div>
-    </header>
 
-    <section class="banner-dev">
-        <div class="banner-content-dev">
-            <h2 class="title-principal-dev">
-                Todo el Desarrollo en un Solo Lugar
-            </h2>
-            <p class="content-principal-dev">
-                Ofrecemos desarrollo web personalizado para proyectos únicos. Creamos páginas estáticas con HTML, CSS y JavaScript, diseñadas para destacar y adaptarse a tus necesidades. ¡Lleva tu presencia online al siguiente nivel con soluciones modernas y funcionales!
-            </p>
+        <div class="karaoke-tracks">
+            <iframe src="script-color/script-color.html" frameborder="0" id="karaoke-tracks"></iframe>
         </div>
-        <div class="banner-img-dev">
-            <img src="../assets/Marca/biglexdev/Logo 1.0.png" alt="Perfil" id="banner-img-dev">
-        </div>
-    </section>
-    <div class="graphic-design">
-        <iframe src="app-twitter/app-twitter.html" frameborder="0" id="graphic-design"></iframe>
-    </div>
 
-    <div class="karaoke-tracks">
-        <iframe src="script-color/script-color.html" frameborder="0" id="karaoke-tracks"></iframe>
-    </div>
+        <script>
+            // Seleccionamos todos los iframes en la página
+            var iframes = document.querySelectorAll('iframe');
 
-    <script>
-        // Seleccionamos todos los iframes en la página
-        var iframes = document.querySelectorAll('iframe');
-
-        // Iteramos sobre cada iframe
-        iframes.forEach(function(iframe) {
-            iframe.onload = function() {
-                // Ajustamos la altura del iframe según el contenido
-                iframe.style.height = iframe.contentWindow.document.documentElement.scrollHeight + 'px';
-            };
-        });
-    </script>
+            // Iteramos sobre cada iframe
+            iframes.forEach(function(iframe) {
+                iframe.onload = function() {
+                    // Ajustamos la altura del iframe según el contenido
+                    iframe.style.height = iframe.contentWindow.document.documentElement.scrollHeight + 'px';
+                };
+            });
+        </script>
+    </main>
 </body>
 </html>
