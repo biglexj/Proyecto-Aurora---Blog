@@ -361,19 +361,10 @@ main {
     margin-top: 20px;
 }
 
-@media (max-width: 1080px) {
-    .banner {
-        height: 20vh;
-        border-radius: 10px;
-        background-color: #40E0D0;
-    }
-}
-
 @media (max-width: 720px) {
     .banner {
         height: 20vh;
         border-radius: 10px;
-        background-color: #1eb34a;
     }
 }
 
