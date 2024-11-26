@@ -368,6 +368,14 @@ main {
     }
 }
 
+@media (max-width: 720px) {
+    .banner {
+        height: 20vh;
+        border-radius: 10px;
+        background-color: #1eb34a;
+    }
+}
+
 .banner-content {
     width: 45%;
     display: flex;
