@@ -363,7 +363,8 @@ main {
 
 @media (max-width: 1080px) {
     .banner {
-        height: 15vh;
+        height: 20vh;
+        border-radius: 10px;
     }
 }
 
@@ -372,12 +373,6 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-@media (max-width: 1080px) {
-    .banner {
-        height: 20vh;
-    }
 }
 
 .banner-img {
@@ -460,6 +455,7 @@ main {
 @media (max-width: 1080px) {
     .banner-2 {
         height: 20vh;
+        border-radius: 10px;
     }
 }
 
