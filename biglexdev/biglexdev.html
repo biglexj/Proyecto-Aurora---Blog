@@ -39,5 +39,25 @@
             <img src="../assets/Marca/biglexdev/Logo 1.0.png" alt="Perfil" id="banner-img-dev">
         </div>
     </section>
+    <div class="graphic-design">
+        <iframe src="app-twitter/app-twitter.html" frameborder="0" id="graphic-design"></iframe>
+    </div>
+
+    <div class="karaoke-tracks">
+        <iframe src="script-color/script-color.html" frameborder="0" id="karaoke-tracks"></iframe>
+    </div>
+
+    <script>
+        // Seleccionamos todos los iframes en la página
+        var iframes = document.querySelectorAll('iframe');
+
+        // Iteramos sobre cada iframe
+        iframes.forEach(function(iframe) {
+            iframe.onload = function() {
+                // Ajustamos la altura del iframe según el contenido
+                iframe.style.height = iframe.contentWindow.document.documentElement.scrollHeight + 'px';
+            };
+        });
+    </script>
 </body>
-</html>s
+</html>

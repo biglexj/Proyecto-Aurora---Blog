@@ -1,4 +1,4 @@
-.karaoke-container {
+.graphic-container {
     margin: 0 auto;
     padding: 3rem 10rem;
     background-color: #fff;
@@ -19,7 +19,14 @@
     text-align: center;
     color: #333;
     font-size: 1.2rem;
-    margin: 0.5rem 0;
+}
+
+.subheader h2 {
+    margin: 0.5rem 0 0 0;
+}
+
+.subheader p {
+    margin: 0;
 }
 
 .icon-play {
@@ -45,7 +52,7 @@
     justify-content: space-evenly;
 }
 
-,content {
+.content {
     width: 45%;
 }
 .content ul {

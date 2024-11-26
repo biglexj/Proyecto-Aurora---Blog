@@ -1,57 +1,31 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Script Color</title>
-    <link rel="icon" type="image/x-icon" href="../assets/Marca/Logo.ico">
-    <link rel="stylesheet" href="../index.html">
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="script-color.css">
-    <link rel="stylesheet" href="script-color.js">
-</head>
+<link rel="icon" type="image/x-icon" href="../assets/Marca/Logo.ico">
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="script-color.css">
+<link rel="stylesheet" href="script-color.js">
+
 <body>
-    <header class="header">
-        <div class="header-content">
-            <div class="logo">
-                <img src="../assets/Marca/Logo.jpg" alt="Logo" id="logo-bar">
-            </div>
-            <h1 class="page-title">Generador de Colores Pasteles</h1>
-            <nav class="tabs">
-                <a href="../index.html" class="tab active1">Inicio</a>
-                <a href="../services/services.html" class="tab active2">Servicios</a>
-                <a href="../bj-producciones/bj-producciones.html" class="tab active3">BJ Producciones</a>
-                <a href="../app-twitter/app-twitter.html" class="tab active4">App-Twitter</a>
-            </nav>
-        </div>
-    </header> 
+  <div class="container">
+    <div class="container-contend">
+        <h1>Generador de Colores Pastel</h1>
+        <label for="hexInput">Ingresa el color hexadecimal:</label>
+        <input type="text" id="hexInput" placeholder="#3498db" maxlength="7">
 
-
-    <div class="script-container">
-        <div class="container">
-            <div class="container-contend">
-                <h1>Generador de Colores Pastel</h1>
-                <label for="hexInput">Ingresa el color hexadecimal:</label>
-                <input type="text" id="hexInput" placeholder="#3498db" maxlength="7">
-                
-                <div class="slider-container">
-                  <div class="slider-label">Saturación: <span id="saturationValue">70</span>%</div>
-                  <input type="range" id="saturationSlider" min="40" max="80" value="70">
-                </div>
-              
-                <div class="slider-container">
-                  <div class="slider-label">Luminosidad: <span id="lightnessValue">80</span>%</div>
-                  <input type="range" id="lightnessSlider" min="60" max="90" value="80">
-                </div>
-                
-                <button onclick="generatePastelColor()">Generar Color Pastel</button>
-              
-                <div class="color-box" id="colorBox"></div>
-                <p>Color Pastel Hex: <span id="pastelHex">#</span></p>
-            </div>
+        <div class="slider-container">
+          <div class="slider-label">Saturación: <span id="saturationValue">70</span>%</div>
+          <input type="range" id="saturationSlider" min="40" max="80" value="70">
         </div>
+
+        <div class="slider-container">
+          <div class="slider-label">Luminosidad: <span id="lightnessValue">80</span>%</div>
+          <input type="range" id="lightnessSlider" min="60" max="90" value="80">
+        </div>
+
+        <button onclick="generatePastelColor()">Generar Color Pastel</button>
+
+        <div class="color-box" id="colorBox"></div>
+        <p>Color Pastel Hex: <span id="pastelHex">#</span></p>
     </div>
-    
-    <script src="script-color.js"></script>
+  </div>
+
+  <script src="script-color.js"></script>
 </body>
-</html>

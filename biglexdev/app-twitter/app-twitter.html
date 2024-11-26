@@ -1,56 +1,31 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App Twitter</title>
-    <link rel="icon" type="image/x-icon" href="../assets/Marca/Logo.ico">
-    <link rel="stylesheet" href="../index.html">
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="app-twitter.css">
-    <script src="app-twitter.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="app-twitter.css">
+<script src="app-twitter.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
-</head>
 <body>
-    <header class="header">
-        <div class="header-content">
-            <div class="logo">
-                <img src="../assets/Marca/Logo.jpg" alt="Logo" id="logo-bar">
-            </div>
-            <h1 class="page-title">Twitter Desing</h1>
-            <nav class="tabs">
-                <a href="../index.html" class="tab active1">Inicio</a>
-                <a href="../services/services.html" class="tab active2">Servicios</a>
-                <a href="../bj-producciones/bj-producciones.html" class="tab active3">BJ Producciones</a>
-                <a href="../script-color/script-color.html" class="tab active4">Generar Color Pastel</a>
-            </nav>
-        </div>
-    </header>
-
     <div class="tweet-container">
         <div class="tweet-header">
-            <img src="../assets/Marca/Logo.jpg" alt="Logo principal" id="logo">
-    
+            <img src="../../assets/Marca/Logo.jpg" alt="Logo principal" id="logo">
+
             <div>
                 <div class="name" contenteditable="true" onpaste="handlePaste(event)">Biglex J</div>
 
                 <div class="username" contenteditable="true" onpaste="handlePaste(event)">@biglexj</div>
             </div>
-    
+
         </div>
-    
-    
+
         <div class="frase" contenteditable="true" onpaste="handlePaste(event)">
             El amor es como el WiFi, a veces fuerte y estable, otras veces un poco inestable pero igualmente importante. ❤️📶
         </div>
-    
+
         <div class="hashtags" contenteditable="true" onpaste="handlePaste(event)">
             #BiglexJ #Anime #Frases #Amor #Vida #Juego #Filosofía
         </div>
-    
+
         <hr class="separator">
-    
+
         <div class="tweet-date" id="tweet-date"></div>
 
         <hr class="separator">
@@ -95,8 +70,7 @@
     <script src="items.js"></script>
     <div class="download">
         <button id="click" onclick="captureAndSave()">
-            <img src="../assets/icons/Descargar.png" alt="Guardar" id="keep">
+            <img src="../../assets/icons/Descargar.png" alt="Guardar" id="keep">
         </button>
     </div>
 </body>
-</html>

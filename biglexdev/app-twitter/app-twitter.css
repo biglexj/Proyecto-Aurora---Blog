@@ -1,3 +1,6 @@
+body {
+    background-color: var(--desaturated-color-green);
+}
 .tweet-container {
     padding: 35px 50px;
     width: 1000px;
