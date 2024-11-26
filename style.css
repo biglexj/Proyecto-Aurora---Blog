@@ -13,7 +13,7 @@
 
     --primary-color-error: #b3261e; /* hsl(4, 62%, 41%) */
     --primary-color-success: #1eb34a; /* hsl(135, 62%, 41%) */
-    
+
     /* Colores Primarios */
     --primary-color-white: #F5F5F5; /* hsl(0, 0%, 96%) */
     --primary-color-green: #8fd7d7; /* hsl(180, 33%, 79%) */
@@ -81,7 +81,7 @@
     --text-color-black: #000000;
     --text-color-dark: #333333;
     --text-imput-field: #F7F7F7;
-    
+
     /* Colores Acentuados */
     --accent-color-pink: #FFB6C1;
     --accent-color-green: #ecffb6;
@@ -99,7 +99,7 @@
     --primary-color-1: var(--a23-color-white);
     --primary-color-2: var(--a23-color-green);
     --primary-color-3: var(--a23-color-black);
-    
+
     --a23-color-white: #fff;
     --a23-color-green: #34a853;
     --a23-color-black: #202124;
@@ -328,22 +328,22 @@ header {
 
 
 
-.tab:hover, .tab.active1.active2.active3.active4.active5 {
+.tab:hover, .tab.active1.active2.active3.active4 {
     background-color: var(--saturated-color-pink);
     color: white;
 }
 
 .banner {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    height: auto;
+    height: 40vh;
     background-color: var(--primary-color-pink);
     padding: 4%;
 }
 
 .banner-content {
-    width: 55%;
+    width: 45%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -351,7 +351,8 @@ header {
 }
 
 .banner-img {
-    width: 42%;
+    width: 40%;
+    height: 70%;
     display: flex;
     justify-content: center;
 }

@@ -7,7 +7,11 @@
     <link rel="icon" type="image/x-icon" href="../assets/Marca/Logo.ico">
     <link rel="stylesheet" href="../index.html">
     <link rel="stylesheet" href="../style.css">
+
     <link rel="stylesheet" href="services.css">
+    <script src="services.js"></script>
+
+        
 </head>
 <body>
     <header class="header">
@@ -19,24 +23,49 @@
             <nav class="tabs">
                 <a href="../index.html" class="tab active1">Inicio</a>
                 <a href="../bj-producciones/bj-producciones.html" class="tab active2">BJ Producciones</a>
-                <a href="../app-twitter/app-twitter.html" class="tab active3">App-Twitter</a>
-                <a href="../script-color/script-color.html" class="tab active4">Generar Color Pastel</a>
+                <a href="../biglexdev/biglexdev.html" class="tab active3">Desarrollo</a>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            z
             </nav>
         </div>
-    </header> 
+    </header>
 
     <section class="banner-s">
         <div class="banner-content-s">
             <h2 class="title-principal-s">
-                Servicios; Edición de Video, Fotos, Vectores...
+                Edición, Diseño y Pistas en un Solo Lugar
             </h2>
             <p class="content-principal-s">
-                Transforma tus momentos en obras maestras visuales con nuestros servicios profesionales de edición de video y fotografía. Desde retoques sutiles hasta efectos especiales impresionantes, llevamos tu visión creativa al siguiente nivel.
+                Biglex J servicios Ofrecemos edición de video y fotografía, diseño gráfico profesional y desarrollo web para proyectos únicos y personalizados. Transformamos tus ideas en realidad y llevamos tu marca al siguiente nivel. ¡Destaca con estilo y creatividad!
             </p>
         </div>
         <div class="banner-img-s">
-            <img src="../assets/Marca/Perfil.png" alt="Perfil" id="banner-img-s">
+            <img src="../assets/Marca/Logo.png" alt="Perfil" id="banner-img-s">
         </div>
     </section>
+    <div class="video-editing">
+        <iframe src="video-editing/video-editing.html" frameborder="0" id="video-editing"></iframe>
+    </div>
+
+    <div class="graphic-design">
+        <iframe src="graphic-design/graphic-design.html" frameborder="0" id="graphic-design"></iframe>
+    </div>
+
+    <div class="karaoke-tracks">
+        <iframe src="karaoke-tracks/karaoke-tracks.html" frameborder="0" id="karaoke-tracks"></iframe>
+    </div>
+
+    <script>
+        // Seleccionamos todos los iframes en la página
+        var iframes = document.querySelectorAll('iframe');
+
+        // Iteramos sobre cada iframe
+        iframes.forEach(function(iframe) {
+            iframe.onload = function() {
+                // Ajustamos la altura del iframe según el contenido
+                iframe.style.height = iframe.contentWindow.document.documentElement.scrollHeight + 'px';
+            };
+        });
+    </script>
+
+    <footer id="social-links-container"></footer>
 </body>
 </html>

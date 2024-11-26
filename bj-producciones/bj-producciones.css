@@ -1,4 +1,4 @@
-.content {
+.banner-bjp {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,7 +21,7 @@
     font-weight: bold;
 }
 
-.content-banner {
+.content-text {
     margin: 20px 0;
     text-align: center;
     padding: 0 110px;
@@ -55,9 +55,9 @@
     color: var(--text-color-white); /* Cambia el color del texto */
 }
 
-.banner-bjp {
-    width: 42%;
-    height: auto;
+.banner-img-frame {
+    width: 40%;
+    height: 70%;
     border-radius: 30px;
     display: flex;
     justify-content: center;

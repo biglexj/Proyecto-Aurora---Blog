@@ -1,5 +1,5 @@
 
-.banner-s {
+.banner-dev {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,14 +8,14 @@
     padding: 4%;
 }
 
-.banner-content-s {
+.banner-content-dev {
     width: 45%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.title-principal-s {
+.title-principal-dev {
     margin: 0;
     font-size: 40px;
     font-weight: bold;
@@ -23,26 +23,21 @@
     text-align: center;
 }
 
-.content-principal-s {
+.content-principal-dev {
     width: 85%;
     margin: 22px 0 40px 0;
     font-size: 20px;
     text-align: center;
 }
 
-.banner-img-s {
+.banner-img-dev {
     width: 40%;
     height: 70%;
     display: flex;
     justify-content: center;
 }
 
-#banner-img-s {
+#banner-img-dev {
     border-radius: 30px;
     background-color: white;
-}
-
-iframe {
-    width: 100%;
-    border: none;
 }
