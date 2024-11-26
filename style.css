@@ -365,6 +365,7 @@ main {
     .banner {
         height: 20vh;
         border-radius: 10px;
+        background-color: #40E0D0;
     }
 }
 
