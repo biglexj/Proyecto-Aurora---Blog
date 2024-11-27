@@ -5,20 +5,19 @@ main {
 
 .banner-bjp {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
-    height: auto;
+    height: 40vh;
     background-color: var(--primary-color-pink);
     padding: 4%;
-    margin-top: 20px;
     border-radius: 20px;
-    height: 40vh;
+    margin-top: 20px;
 }
 
 @media (max-width: 720px) {
     .banner-bjp {
         width: 100%;
-        height: 20vh;
+        height: 25vh;
         padding: 3% 0;
         border-radius: 10pX;
         overflow: hidden;
@@ -27,39 +26,44 @@ main {
 }
 
 .banner-content-bjp {
-    width: 55%;
+    max-width: 60%;
+    width: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
-.title-principal-bj{
+@media (max-width: 720px) {
+    .banner-content-bjp {
+        width: 80%;
+    }
+}
+
+.title-principal-bjp{
     margin: 0;
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: bold;
+    color: var(--text-color-dark);
     text-align: center;
 }
 
 @media (max-width: 720px) {
-    .title-principal-bj {
+    .title-principal-bjp {
         font-size: 1rem;
     }
 }
 .content-text {
+    width: 85%;
     margin: 20px 0;
     text-align: center;
-    padding: 0 110px;
+    font-size: 1.5  rem;
     color: var(--text-color-dark);
-    font-size: 2rem;
 }
 
 @media (max-width: 720px) {
     .content-text {
-        margin: 7px 0;
-        text-align: center;
-        padding: 0 10px;
         font-size: 0.5rem;
+        margin: 6px 0;
     }
 }
 
@@ -78,7 +82,7 @@ main {
 
 @media (max-width: 720px) {
     .yt-link {
-        border-radius: 10px;
+        border-radius: 7px;
         padding: 5px 10px;
     }
 }
@@ -86,13 +90,14 @@ main {
 .link-content {
     text-decoration: none;
     font-size: 18px;
+    text-align: center;
     color: #f95c5c;
     display: inline-block;
 }
 
 @media (max-width: 720px) {
     .link-content {
-        font-size: 14px;
+        font-size: 11px;
     }
 }
 
@@ -104,7 +109,8 @@ main {
 }
 
 .banner-img-frame {
-    width: 40%;
+    max-width: 35%;
+    width: 70%;
     height: 70%;
     border-radius: 30px;
     display: flex;
@@ -115,9 +121,9 @@ main {
 
 @media (max-width: 720px) {
     .banner-img-frame {
-        width: 30%;
+        width: 60%;
         height: 60%;
-        border-radius: 15px;
+        border-radius: 10px;
     }
 }
 
@@ -126,6 +132,10 @@ main {
     height: auto;
     object-fit: cover;
     display: block;
+}
+
+#logo-animated {
+    width: 80%;
 }
 
 .videosContainer {
