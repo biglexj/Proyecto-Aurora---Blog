@@ -4,11 +4,25 @@
     border-radius: 20px;
 }
 
+@media (max-width: 480px) {
+    .social-links {
+        padding: 12px 0;
+        border-radius: 10px;
+    }
+}
+
 .social-links h3 {
     margin: 0 0 24px 0;
     display: flex;
     justify-content: center;
     font-size: 2rem;
+}
+
+@media (max-width: 480px) {
+    .social-links h3 {
+        margin: 0 0 12px 0;
+        font-size: 1rem;
+    }
 }
 
 .social-icons {
@@ -23,8 +37,24 @@
     margin: 0 10px;
 }
 
+@media (max-width: 480px) {
+    .social-icon {
+        height: 20px;
+        width: 20px;
+        margin: 0 10px;
+    }
+}
+
 #social-icon {
     height: 40px;
     width: 40px;
     border-radius: 100%;
+}
+
+@media (max-width: 480px) {
+    #social-icon {
+        height: 25px;
+        width: 25px;
+        border-radius: 100%;
+    }
 }
