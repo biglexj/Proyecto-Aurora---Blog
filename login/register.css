@@ -4,7 +4,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
 }
 
@@ -20,6 +20,14 @@ body {
     align-items: center;
 }
 
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 720px) {
+    .container {
+        height: 600px;
+        width: 280px;
+    }
+}
+
 .content-logo {
     display: flex;
     align-items: center;
@@ -27,9 +35,22 @@ body {
     width: 350px;
 }
 
+@media (max-width: 720px) {
+    .content-logo {
+        margin: 0 0 5px 0;
+        width: 250px;
+    }
+}
+
 #logo {
     height: 50px;
     border-radius: 100%;
+}
+
+@media (max-width: 720px) {
+    #logo {
+        height: 45px;
+    }
 }
 
 .company {
@@ -37,11 +58,23 @@ body {
     margin: 0 0 0 5px;
 }
 
+@media (max-width: 720px) {
+    .company {
+        font-size: 20px;
+        margin: 0 0 0 3px;
+    }
+}
+
 .form {
     display: flex;
     flex-direction: column;
-    
     width: 350px;
+}
+
+@media (max-width: 720px) {
+    .form {
+        width: 250px;
+    }
 }
 
 .label {
@@ -54,12 +87,27 @@ body {
     text-align: end;
 }
 
+@media (max-width: 720px) {
+    .label {
+        padding: 0 5px;
+        font-size: 15px;
+        height: 34px;
+    }
+}
+
 .input {
     border: none;
     height: 25px;
     padding: 7px 10px;
     border-radius: 10px;
     background-color: var(--text-imput-field);
+}
+
+@media (max-width: 720px) {
+    .input {
+        height: 22px;
+        padding: 6px 8px;
+    }
 }
 
 .button-primary {
@@ -69,8 +117,16 @@ body {
     margin-top: 20px;
     font-size: 20px;
     font-weight: 300;
-    color: var(--text-imput-field);
-    background-color: var(--hospital-gren);
+    color: var(--text-input-field);
+    background-color: var(--hospital-green);
+}
+
+@media (max-width: 720px) {
+    .button-primary {
+        height: 34px;
+        margin-top: 15px;
+        font-size: 16px;
+    }
 }
 
 #recovery {
@@ -82,6 +138,13 @@ body {
     text-align: center;
     color: var(--text-color-dark);
     font-size: 15px;
+}
+
+@media (max-width: 720px) {
+    #recovery {
+        height: 34px;
+        font-size: 13px;
+    }
 }
 
 .button-secondary {
@@ -101,6 +164,15 @@ body {
     margin-top: 10px;
 }
 
+@media (max-width: 720px) {
+    .button-secondary {
+        height: 34px;
+        width: 250px;
+        font-size: 16px;
+        margin-top: 8px;
+    }
+}
+
 .home {
     margin-top: 30px;
     display: flex;
@@ -111,4 +183,12 @@ body {
     text-align: center;
     color: var(--text-color-dark);
     font-size: 18px;
+}
+
+@media (max-width: 720px) {
+    .home {
+        margin-top: 25px;
+        height: 34px;
+        font-size: 15px;
+    }
 }

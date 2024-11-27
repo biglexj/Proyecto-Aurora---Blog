@@ -14,7 +14,7 @@ main {
     margin-top: 20px;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 480px) {
     .banner-s {
         height: 20vh;
     }
@@ -59,4 +59,10 @@ iframe {
     width: 100%;
     border: none;
     margin-top: 20px;
+}
+
+@media (max-width: 720px) {
+    iframe {
+        margin-top: 10px;
+    }
 }
