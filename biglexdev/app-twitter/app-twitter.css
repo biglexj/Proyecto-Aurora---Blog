@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 main {
     max-width: 1400px;
     background-color: transparent;
@@ -5,18 +9,37 @@ main {
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: var(--desaturated-color-green);
     padding: 20px;
     border-radius: 20px;
 }
+
+@media (max-width: 720px) {
+    .container {
+        padding: 15px;
+        border-radius: 10px;
+    }
+}
 .tweet-container {
     padding: 35px 50px;
-    width: 1000px;
+    max-width: 1000px;
+    width: 100%;
     height: auto;
     border-radius: 13px;
-    margin: 30px auto;
     background-color: black;
     font-size: 30px;
+}
+
+@media (max-width: 720px) {
+    .tweet-container {
+        width: 500px;
+        padding: 17px 25px;
+        font-size: 15px;
+        border-radius: 7px;
+    }
 }
 
 .tweet-header {
@@ -30,6 +53,14 @@ main {
     height: 95px;
     border-radius: 100%;
     margin-right: 20px;
+}
+
+@media (max-width: 720px) {
+    #logo {
+        width: 45px;
+        height: 45px;
+        margin-right: 10px;
+    }
 }
 
 .name {
@@ -87,7 +118,7 @@ hr.separator {
 
 .icon.active {
     fill: #f91880;
-  }
+}
 
 #comment:hover {
     fill: #1d9bf0;
@@ -137,7 +168,6 @@ hr.separator {
     fill: #9370DB;
 }
 
-
 .download {
     display: flex;
     justify-content: center;
@@ -151,4 +181,27 @@ hr.separator {
 
 #keep {
     height: 50px;
+}
+
+@media (max-width: 720px) {
+    .name, .frase, .hashtags {
+        font-size: 19px;
+    }
+
+    .tweet-date {
+        font-size: 11px;
+    }
+
+    .like {
+        font-size: 10px;
+    }
+
+    .actions {
+        padding: 0 50px;
+        margin-top: 15px;
+    }
+
+    .icon {
+        height: 23px;
+    }
 }
