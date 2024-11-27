@@ -8,34 +8,37 @@
     <link rel="stylesheet" href="../index.html">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="../dark-mode/colors-backgroud.css">
+    <script src="register.js"></script>
 </head>
 <body>
+    <script src="../dark-mode/colors-backgroud.js"></script>
     <div class="container">
-        <div class="content-logo">
-            <img src="../assets/Marca/Logo.jpg" alt="" id="logo">
+        <div class="logo-content">
+            <img src="../assets/Marca/Logo.jpg" alt="Logo de la empresa" id="logo">
             <p class="company">Company</p>
         </div>
         <form action="/" class="form">
-            <label for="Name" class="label">Nombre/s</label>
-            <input type="name" id="name" class="input input-name" >
+            <label for="name" class="label">Nombre(s)</label>
+            <input type="text" id="name" class="input name-input" placeholder="Ejemplo: Alex">
 
-            <label for="apellidos" class="label">Apellidos</label>
-            <input type="apellidos" id="apellidos" class="input input-apellidos">
+            <label for="last-name" class="label">Apellidos</label>
+            <input type="text" id="last-name" class="input last-name-input" placeholder="Ejemplo: Martínez">
 
-            <label for="user" class="label">Usuario</label>
-            <input type="usuario" placeholder="@biglexj" id="user" class="input input-user">
+            <label for="username" class="label">Usuario</label>
+            <input type="text" placeholder="@biglexj" id="username" class="input username-input">
 
-            <label for="correo" class="label">Ingresa tu correo:</label>
-            <input type="text" placeholder="usuario@example.com" id="email" class="input input-correo">
+            <label for="email" class="label">Correo Electrónico</label>
+            <input type="email" placeholder="usuario@example.com" id="email" class="input email-input">
 
-            <label for="password" class="label">Ingresa tu contraseña</label>
-            <input type="password" placeholder="**********" id="passwoard" class="input input-passwoard">
+            <label for="password" class="label">Contraseña</label>
+            <input type="password" placeholder="**********" id="password" class="input password-input">
 
-            <input type="submit" value="Iniciar Sesión" class="button-primary">
-            <a href="/" id="recovery">Olvidaste tu contraseña</a>
+            <input type="submit" value="Registrar" class="primary-button">
+            <a href="/" id="recovery">¿Olvidaste tu contraseña?</a>
         </form>
 
-        <a href="login.html" class="button-secondary">Iniciar Sesión</a>        
+        <a href="login.html" class="secondary-button">Iniciar Sesión</a>
         <a href="../index.html" class="home active">Inicio</a>
     </div>
 </body>

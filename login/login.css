@@ -27,7 +27,7 @@ body {
     }
 }
 
-.content-logo {
+.logo-content {
     display: flex;
     align-items: center;
     margin: 0 0 10px 0;
@@ -35,7 +35,7 @@ body {
 }
 
 @media (max-width: 720px) {
-    .content-logo {
+    .logo-content {
         margin: 0 0 5px 0;
         width: 250px;
     }
@@ -43,19 +43,19 @@ body {
 
 #logo {
     height: 50px;
-    border-radius: 100%;
+    border-radius: 50%;
 }
 
 @media (max-width: 720px) {
     #logo {
         height: 45px;
-        border-radius: 100%;
     }
 }
 
 .company {
     font-size: 25px;
-    margin: 0 0 0 5px;
+    margin-left: 5px;
+    color: var(--text-color-dark);
 }
 
 .form {
@@ -77,7 +77,7 @@ body {
     padding: 0 10px;
     font-size: 20px;
     height: 39px;
-    text-align: end;
+    text-align: left;
 }
 
 @media (max-width: 720px) {
@@ -93,7 +93,14 @@ body {
     height: 25px;
     padding: 7px 10px;
     border-radius: 10px;
-    background-color: var(--text-imput-field);
+    background-color: var(--text-input-field); /* Corregido */
+    outline: none; /* Elimina el contorno por defecto */
+    transition: background-color 0.3s ease;
+}
+
+.input:focus {
+    background-color: var(--desaturated-color-pink); /* Color definido para el fondo en focus */
+    outline: none; /* Asegura que no haya contorno */
 }
 
 @media (max-width: 720px) {
@@ -103,7 +110,7 @@ body {
     }
 }
 
-.button-primary {
+.primary-button {
     height: 39px;
     border: none;
     border-radius: 10px;
@@ -112,10 +119,17 @@ body {
     font-weight: 300;
     color: var(--text-input-field);
     background-color: var(--hospital-green);
+    cursor: pointer; /* Añadido */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.primary-button:hover {
+    background-color: var(--saturated-color-green);
+    transform: scale(1.02);
 }
 
 @media (max-width: 720px) {
-    .button-primary {
+    .primary-button {
         height: 34px;
         margin-top: 15px;
         font-size: 16px;
@@ -131,6 +145,11 @@ body {
     text-align: center;
     color: var(--text-color-dark);
     font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+#recovery:hover {
+    color: var(--text-color-dark-hover);
 }
 
 @media (max-width: 720px) {
@@ -140,7 +159,7 @@ body {
     }
 }
 
-.button-secondary {
+.secondary-button {
     height: 39px;
     width: 350px;
     border-radius: 10px;
@@ -155,10 +174,16 @@ body {
     align-items: center;
     justify-content: center;
     margin-top: 10px;
+    cursor: pointer; /* Añadido */
+    transition: all 0.3s ease;
+}
+
+.secondary-button:hover {
+    background-color: var(--button-secondary-hover);
 }
 
 @media (max-width: 720px) {
-    .button-secondary {
+    .secondary-button {
         height: 34px;
         width: 250px;
         font-size: 16px;
@@ -176,6 +201,12 @@ body {
     text-align: center;
     color: var(--text-color-dark);
     font-size: 18px;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.home:hover {
+    color: var(--text-color-dark-hover);
 }
 
 @media (max-width: 720px) {

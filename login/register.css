@@ -28,7 +28,7 @@ body {
     }
 }
 
-.content-logo {
+.logo-content {
     display: flex;
     align-items: center;
     margin: 0 0 10px 0;
@@ -36,7 +36,7 @@ body {
 }
 
 @media (max-width: 720px) {
-    .content-logo {
+    .logo-content {
         margin: 0 0 5px 0;
         width: 250px;
     }
@@ -44,7 +44,7 @@ body {
 
 #logo {
     height: 50px;
-    border-radius: 100%;
+    border-radius: 50%;
 }
 
 @media (max-width: 720px) {
@@ -55,13 +55,14 @@ body {
 
 .company {
     font-size: 25px;
-    margin: 0 0 0 5px;
+    margin-left: 5px;
+    color: var(--text-color-dark);
 }
 
 @media (max-width: 720px) {
     .company {
         font-size: 20px;
-        margin: 0 0 0 3px;
+        margin-left: 3px;
     }
 }
 
@@ -84,7 +85,7 @@ body {
     padding: 0 10px;
     font-size: 20px;
     height: 39px;
-    text-align: end;
+    text-align: left;
 }
 
 @media (max-width: 720px) {
@@ -100,7 +101,14 @@ body {
     height: 25px;
     padding: 7px 10px;
     border-radius: 10px;
-    background-color: var(--text-imput-field);
+    background-color: var(--text-input-field);
+    outline: none; /* Elimina el contorno predeterminado */
+    transition: background-color 0.3s ease;
+}
+
+.input:focus {
+    background-color: var(--desaturated-color-pink); /* Color definido para el fondo en focus */
+    outline: none; /* Asegura que no haya contorno */
 }
 
 @media (max-width: 720px) {
@@ -110,7 +118,7 @@ body {
     }
 }
 
-.button-primary {
+.primary-button {
     height: 39px;
     border: none;
     border-radius: 10px;
@@ -119,10 +127,17 @@ body {
     font-weight: 300;
     color: var(--text-input-field);
     background-color: var(--hospital-green);
+    cursor: pointer; /* Apunta claramente que es clickeable */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.primary-button:hover {
+    background-color: var(--saturated-color-green); /* Efecto hover para mejorar UX */
+    transform: scale(1.02); /* Ligero efecto al pasar el cursor */
 }
 
 @media (max-width: 720px) {
-    .button-primary {
+    .primary-button {
         height: 34px;
         margin-top: 15px;
         font-size: 16px;
@@ -138,6 +153,11 @@ body {
     text-align: center;
     color: var(--text-color-dark);
     font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+#recovery:hover {
+    color: var(--text-color-dark-hover); /* Cambia el color al pasar el cursor */
 }
 
 @media (max-width: 720px) {
@@ -147,14 +167,13 @@ body {
     }
 }
 
-.button-secondary {
+.secondary-button {
     height: 39px;
     width: 350px;
     border-radius: 10px;
     font-size: 20px;
     text-align: center;
     border: 1px solid var(--text-color-dark);
-    padding: 0;
     background-color: transparent;
     text-decoration: none;
     display: flex;
@@ -162,10 +181,16 @@ body {
     justify-content: center;
     color: var(--text-color-dark);
     margin-top: 10px;
+    cursor: pointer; /* Añadido */
+    transition: all 0.3s ease;
+}
+
+.secondary-button:hover {
+    background-color: var(--button-secondary-hover); /* Agrega un color al hover */
 }
 
 @media (max-width: 720px) {
-    .button-secondary {
+    .secondary-button {
         height: 34px;
         width: 250px;
         font-size: 16px;
@@ -183,6 +208,12 @@ body {
     text-align: center;
     color: var(--text-color-dark);
     font-size: 18px;
+    transition: color 0.3s ease;
+    cursor: pointer; /* Indicador claro para clickeable */
+}
+
+.home:hover {
+    color: var(--text-color-dark-hover); /* Cambia color al hover */
 }
 
 @media (max-width: 720px) {

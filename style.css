@@ -80,7 +80,7 @@
     --text-color-white: #F5F5F5;
     --text-color-black: #000000;
     --text-color-dark: #333333;
-    --text-imput-field: #F7F7F7;
+    --text-input-field: #F7F7F7;
 
     /* Colores Acentuados */
     --accent-color-pink: #FFB6C1;
@@ -369,7 +369,7 @@ main {
         margin-left: 2px;
         padding: 5px 8px;
         border-radius: 10px;
-        font-size: 10px;
+        font-size: 8px;
         font-weight: 430;
     }
 }

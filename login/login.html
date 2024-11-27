@@ -7,28 +7,28 @@
     <link rel="icon" type="image/x-icon" href="../assets/Marca/Logo.ico">
     <link rel="stylesheet" href="../index.html">
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../dark-mode/colors-backgroud.css">
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
+    <script src="../dark-mode/colors-backgroud.js"></script>
     <div class="container">
-        <div class="content-logo">
+        <div class="logo-content">
             <img src="../assets/Marca/Logo.jpg" alt="" id="logo">
             <p class="company">Company</p>
         </div>
         <form action="/" class="form">
-            <label for="correo" class="label">Ingresa tu correo:</label>
+            <label for="email" class="label">Ingresa tu correo:</label>
+            <input type="text" placeholder="usuario@example.com" id="email" class="input email-input">
 
-            <input type="text" placeholder="usuario@example.com" id="email" class="input input-correo">
+            <label for="password" class="label">Ingresa tu contraseña:</label>
+            <input type="password" placeholder="**********" id="password" class="input password-input">
 
-            <label for="password" class="label">Ingresa tu contraseña</label>
-
-            <input type="password" placeholder="**********" id="passwoard" class="input input-passwoard">
-
-            <input type="submit" value="Iniciar Sesión" class="button-primary">
+            <input type="submit" value="Iniciar Sesión" class="primary-button">
             <a href="/" id="recovery">Olvidaste tu contraseña</a>
         </form>
 
-        <a href="register.html" class="button-secondary">Crear Cuenta</a>
+        <a href="register.html" class="secondary-button">Crear Cuenta</a>
         <a href="../index.html" class="home active">Inicio</a>
     </div>
 </body>
