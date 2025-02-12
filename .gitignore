@@ -3,3 +3,6 @@ experimental/
 
 # Ignorar configuraciones específicas de IDEs
 .vscode/
+
+# Ignorar configuraciones específicas de IDEs
+.github/
