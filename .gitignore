@@ -5,4 +5,4 @@ experimental/
 .vscode/
 
 # Ignorar configuraciones específicas de IDEs
-.github/
+.github/workflows
