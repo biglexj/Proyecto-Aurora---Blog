@@ -636,7 +636,7 @@ main {
     }
 }
 
-.informacion {
+.información {
     display: flex;
     justify-content: space-between;
     background-color: var(--primary-color-pink);
