@@ -54,9 +54,17 @@
             <div class="carousel-container">
                 <button class="carousel-nav-btn prev"><</button>
                 <div class="carousel-wrapper">
-                    <div class="caja">Proyecto Web 1</div>
+                    <div class="caja">
+                        <img src="link" alt="Imagen">
+                        <h2>Title</h2>
+                        <a href="link">description de json</a>
+                    </div>
                     <div class="caja">Proyecto Diseño 2</div>
-                    <div class="caja">Proyecto Multimedia 3</div>
+                    <div class="caja">
+                        <img src="link" alt="Imagen">
+                        <h2>Title</h2>
+                        <a href="link">description de json</a>
+                    </div>
                     <div class="caja">Proyecto Diseño 3</div>
                     <div class="caja">Proyecto Multimedia 4</div>
                     <div class="caja">Proyecto Diseño 4</div>
@@ -66,64 +74,8 @@
             </div>
             <div class="carousel-dots">
             </div>
+            <script src="scripts/carousel/carousel.js"></script>
         </section>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const wrapper = document.querySelector('.carousel-wrapper');
-                const prevBtn = document.querySelector('.prev');
-                const nextBtn = document.querySelector('.next');
-                const dotsContainer = document.querySelector('.carousel-dots');
-                const boxes = document.querySelectorAll('.caja');
-            
-                let currentIndex = 0;
-                const totalBoxes = boxes.length;
-                const boxWidth = boxes[0].offsetWidth + 20; // width + margin
-            
-                // Generar dots dinámicamente 
-                for(let i = 0; i < totalBoxes; i++) {
-                    const dot = document.createElement('span');
-                    dot.className = 'dot';
-                    if(i === 0) dot.classList.add('active');
-                    dot.dataset.index = i;
-                    dotsContainer.appendChild(dot);
-                }
-            
-                const dots = document.querySelectorAll('.dot');
-            
-                function updateCarousel() {
-                    wrapper.style.transform = `translateX(-${currentIndex * boxWidth}px)`;
-                    dots.forEach((dot, index) => {
-                        dot.classList.toggle('active', index === currentIndex);
-                    });
-                }
-            
-                nextBtn.addEventListener('click', () => {
-                    if(currentIndex < totalBoxes - 1) {
-                        currentIndex++;
-                    } else {
-                        currentIndex = 0;
-                    }
-                    updateCarousel();
-                });
-            
-                prevBtn.addEventListener('click', () => {
-                    if(currentIndex > 0) {
-                        currentIndex--;
-                    } else {
-                        currentIndex = totalBoxes - 1;
-                    }
-                    updateCarousel();
-                });
-            
-                dots.forEach(dot => {
-                    dot.addEventListener('click', (e) => {
-                        currentIndex = parseInt(e.target.dataset.index);
-                        updateCarousel();
-                    });
-                });
-            });
-        </script>
 
         <section class="banner b3">
             <div class="banner-img i3">
@@ -155,19 +107,19 @@
 
         <footer id="social-links-container"></footer>
         <script src="scripts/loadFooter.js"></script>
-        <footer class="informacion">
+        <footer class="información">
             <div class="container terminos">
                 <h1 class="title-i">
                     Términos y Condiciones
                 </h1>
-                <a href="" class="buttons terminos-b">Click</a>
+                <a href="terminos y condiciones/terminos_y_condiciones.html" class="buttons terminos-b">Más detalles</a>
             </div>
 
             <div class="container support">
                 <h1 class="title-i">Soporte Técnico</h1>
                 <h2 class="text-i">Para cualquier ayuda</h2>
                 <a href="https://github.com/biglexj/" target="_blank" class="buttons github">GitHub</a>
-                <a href="biglex.rv@gmail.com" target="_blank" class="buttons gmail">Gmail</a>
+                <a href="mailto:biglex.rv@gmail.com" target="_blank" class="buttons gmail">Gmail</a>
             </div>
 
             <div class="container contact">
