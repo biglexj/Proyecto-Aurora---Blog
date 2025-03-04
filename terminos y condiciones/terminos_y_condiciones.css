@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.text {
+    max-width: 1400px;
+    margin: 5%;
+    padding: 10;
+    z-index: 15px;
+}

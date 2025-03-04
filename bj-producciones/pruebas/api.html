@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+.video-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsivo */
+    gap: 20px; /* Espaciado entre los videos */
+    margin: 20px;
+}
+
+.video-container div {
+    background-color: var(--desaturated-color-green);
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    padding: 15px; /* Espaciado interno */
+    text-align: center;
+}
+
+.video-container h3 {
+    font-size: 16px; /* Tamaño de fuente */
+    color: #333; /* Color del texto */
+    margin-bottom: 10px; /* Espaciado entre título y video */
+}
+
+.video-container iframe {
+    width: 100%; /* Hace que el iframe ocupe todo el ancho */
+    height: auto; /* Mantiene la proporción del video */
+    border-radius: 10px; /* Redondea los bordes del iframe */
+}
+        section {
+    margin-bottom: 40px;
+  }
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.video-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-frame iframe {
+    width: 100%;
+    height: auto;
+}
+    </style>
+</head>
+<body>
+    <div id="youtube-videos" class="video-container"></div>
+    <script src="yt-videos.js"></script>
+</body>
+</html>

@@ -1,1 +1,6 @@
-node_modules
+# Ignorar la carpeta test
+experimental/
+
+# Ignorar configuraciones específicas de IDEs
+.vscode/
+.github
