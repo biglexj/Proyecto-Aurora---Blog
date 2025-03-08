@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+#root {
+  font-family: Google Sans;
+}
+
+#title {
+  font-family: Kefa;
+  font-size: 1.8rem;
+}
+
 @theme {
   /* Variables de Fuentes */
   --font-kefa: Kefa, "serif";
