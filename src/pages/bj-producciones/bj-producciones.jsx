@@ -78,9 +78,8 @@ const BJProducciones = () => {
 
 
   return (
-    <main className='bg-green-creativity-400 min-h-screen text-primary-white'>
+    <main className='min-h-screen text-primary-white'>
       <div className="max-w-7xl mx-auto min-h-screen p-0">
-        <div className="max-w-7xl mx-auto min-h-screen p-0">
           <header className="rounded-b-2xl rounded-br-2xl max-w-7xl mx-auto bg-green-creativity-300 text-[#333333] p-0">
             <div className="h-18 container mx-auto flex items-center justify-between px-4">
               <div className="logo flex items-center">
@@ -145,9 +144,8 @@ const BJProducciones = () => {
               </div>
             ))}
           </div>
-        </div>
       </div>
-    </main>
+  </main>
   );
 };
 

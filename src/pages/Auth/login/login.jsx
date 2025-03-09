@@ -4,7 +4,7 @@ import logo from "../../../assets/Marca/Logo.jpg";
 
 const Login = () => {
   return (
-    <main className="bg-green-creativity-400 min-h-screen text-primary-white">
+    <main className="min-h-screen text-primary-white">
       <div className="max-w-7xl mx-auto min-h-screen p-0">
         <div className="flex justify-center items-center min-h-screen">
         <div className="bg-pink-panther-300 w-115 p-6 rounded-3xl flex flex-col items-center">
