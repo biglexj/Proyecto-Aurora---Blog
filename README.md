@@ -2,18 +2,6 @@
 
 Bienvenido al repositorio del Proyecto Aurora - Blog. Este proyecto es una página web desarrollada para "Biglex J Company", que tiene como objetivo dar a conocer los servicios y proyectos de la compañía.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-
-
 ## Descripción
 
 El sitio web está diseñado para ser informativo y funcional, proporcionando detalles sobre la compañía, los proyectos en curso, y los servicios ofrecidos. Incluye varias secciones como:
@@ -25,17 +13,23 @@ El sitio web está diseñado para ser informativo y funcional, proporcionando de
 
 ## Características
 
-- **Modo Oscuro**: Soporte para modo oscuro con estilos personalizados.
-- **Carrusel de Proyectos**: Un carrusel interactivo que muestra los proyectos en los que se está trabajando.
-- **Botones de Llamada a la Acción**: Botones para registrarse e iniciar sesión.
+- **Modo Oscuro**: Soporte para modo oscuro con estilos personalizados usando Tailwind CSS.
+- **Carrusel de Proyectos**: Un carrusel interactivo desarrollado con React.
+- **Botones de Llamada a la Acción**: Sistema de autenticación con React Router.
 - **Sección de Contacto**: Información de contacto y enlaces a redes sociales.
 
 ## Tecnologías Utilizadas
 
-- **HTML5**: Para la estructura del sitio web.
-- **CSS3**: Para el diseño y la presentación visual.
-- **JavaScript**: Para la interactividad y funcionalidad dinámica.
-- **GitHub Pages**: Para el despliegue del sitio web.
+- **React**: Framework principal para la interfaz de usuario.
+- **Vite**: Herramienta de construcción y desarrollo.
+- **Tailwind CSS**: Framework de CSS para el diseño.
+- **React Router**: Para la navegación entre páginas.
+- **ESLint**: Para mantener la calidad del código.
+
+## Requisitos Previos
+
+- Node.js (versión 18 o superior)
+- npm o yarn
 
 ## Instalación
 
@@ -47,7 +41,24 @@ El sitio web está diseñado para ser informativo y funcional, proporcionando de
     ```bash
     cd proyecto-aurora-blog
     ```
-3. Abre el archivo `index.html` en tu navegador para ver el sitio web.
+3. Instala las dependencias:
+    ```bash
+    npm install
+    ```
+4. Inicia el servidor de desarrollo:
+    ```bash
+    npm run dev
+    ```
+
+## Scripts Disponibles
+
+- `npm run dev` - Inicia el servidor de desarrollo
+- `npm run build` - Construye la aplicación para producción
+- `npm run lint` - Ejecuta el linter
+- `npm run preview` - Vista previa de la versión de producción
+
+## Estructura del Proyecto
+```
 
 ## Contribución
 
