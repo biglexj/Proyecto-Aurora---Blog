@@ -48,7 +48,7 @@ const Carousel = () => {
   }, []);
 
   return (
-    <section className="h-125 mt-6 flex flex-col max-w-7xl mx-auto p-6 bg-violet-brand-300 rounded-2xl shadow-md">
+    <section className="h-auto mt-6 flex flex-col max-w-7xl mx-auto p-6 bg-violet-brand-300 rounded-2xl shadow-md">
       <h1 className="text-4xl font-bold text-center mb-8">Proyectos en los que estoy trabajando</h1>
       <div className="relative flex items-center">
         <button onClick={prevSlide} className="carousel-nav-btn prev absolute left-0 z-10 bg-violet-brand-500 text-white p-4 rounded-l-xl hover:bg-violet-brand-600 transition-colors">
@@ -66,14 +66,16 @@ const Carousel = () => {
                   />
                   <h2 className="text-xl font-bold mt-2 text-gray-800">{project.title}</h2>
                   <p className="text-gray-600 mb-2">{project.description}</p>
-                  <a 
-                    href={project.link} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="text-blue-brand-500 hover:underline"
-                  >
-                    Ver más
-                  </a>
+                  <div className="flex justify-center">
+                    <a 
+                      href={project.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-white text-center hover:underline pt-2 pb-2 px-4 rounded-lg bg-pink-panther-500 hover:bg-pink-panther-600 transition-colors"
+                    >
+                      Ver
+                    </a>
+                  </div>
                 </div>
               ))}
             </div>

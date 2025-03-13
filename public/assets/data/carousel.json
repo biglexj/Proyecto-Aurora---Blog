@@ -1,32 +1,33 @@
 [
     {
         "image": "/assets/YouTube/@biglexj/Especial de 14 de febrero.png",
-        "title": "Nuevo video YouTube",
-        "description": "Especial de San Valentín - Cover de canciones románticas",
-        "link": "https://youtube.com/@biglexj"  
+        "title": "¿Qué es amor? - Especial, 14 de febrero",
+        "id": "IUZlRGTBcPo&t=363s",
+        "description": "💔 Especial de San Valentín: El Color del Amor, la Ciencia y un Toque de Sarcasmo 💔",
+        "link": "https://www.youtube.com/watch?v=IUZlRGTBcPo&t=363s"  
     },
     {
         "image": "/assets/img/Lumi N0va 2.png",
-        "title": "Karaoke Project",
-        "description": "Nueva colección de karaokes personalizados",
-        "link": "https://youtube.com/@biglexj"
+        "title": "Libre Soltera - Yarita Lizhet (Karaoke/Pista)",
+        "description": "¡Siente la libertad con \"Libre Soltera\" interpretado por Yarita Lizeth Yanarico! 🎶",
+        "link": "https://www.youtube.com/watch?v=CdhtNtVgi-A"
     },
     {
         "image": "/assets/YouTube/@biglexj/Pelicula.png",
-        "title": "Portfolio Web",
-        "description": "Desarrollo de sitios web modernos y responsivos",
-        "link": "https://github.com/biglexj"
+        "title": "Trailer - MARZO 2025",
+        "description": "👻 ¡Sumérgete en el horror y la intriga! 🌚 Descubre el lado oscuro del misterio con nuestro nuevo trailer de terror.",
+        "link": "https://www.youtube.com/watch?v=zCByWtZL7hs"
     },
     {
         "image": "/assets/YouTube/@biglexj/Tableta Grafica.png",
-        "title": "Edición de Video",
-        "description": "Servicios de edición profesional para contenido digital",
-        "link": "https://www.instagram.com/biglexj"
+        "title": "Tableta Grafica XP Pen Deco 01 V3 - Unboxing",
+        "description": "¡Descubre la XP-Pen Deco 01 V3! 🎨",
+        "link": "https://www.youtube.com/watch?v=rZV8RlzE5QI&t=174s"
     },
     {
-        "image": "/assets/img/Lumi N0va 2.png",
-        "title": "Producción Musical",
-        "description": "Creación de pistas y arreglos musicales",
-        "link": "https://youtube.com/@biglexj"
+        "image": "/assets/YouTube/@biglexj/Cover Nigh Dancer.png",
+        "title": "🌙 Biglex J presenta: \"Night Dancer\" de Imase - Cover Exclusivo 🎤",
+        "description": "¡Disfruta de este cover exclusivo de \"Night Dancer\" de Imase presentado por Biglex J!",
+        "link": "https://www.youtube.com/watch?v=VNXAsEwCgQU"
     }
 ]
