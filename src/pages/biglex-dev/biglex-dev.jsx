@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/Marca/Logo.jpg';
+import logo from '/src/assets/Marca/@biglexdev/Logo 1.0.jpg';
 import ScriptColor from './script-color/script-color';  // Add this import
 import CloneTwitterUI from './clone-twitter-ui/clone-twitter-ui';  // Add this import
 
@@ -38,7 +38,7 @@ const Developer = () => {
                 </div>
 
                 <div className="w-2/5 flex justify-center">
-                    <img src="src/assets/Marca/biglexdev/Logo 1.0.jpg" alt="Perfil" className="w-56 md:w-80 rounded-4xl shadow-lg hover:scale-105 transition-transform" />
+                    <img src="/src/assets/Marca/biglexdev/Logo 1.0.jpg" alt="Perfil" className="w-56 md:w-80 rounded-4xl shadow-lg hover:scale-105 transition-transform" />
                   </div>
               </section>
               <section className="clone-twitter h-auto mt-6 flex flex-col max-w-7xl mx-auto p-6 bg-green-creativity-300 rounded-2xl shadow-md">

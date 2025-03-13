@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/Marca/Logo.jpg";
+import logo from "/src/assets/Marca/@biglexj/Logo.jpg";
 import SocialLinks from '../Social-Links/SocialLinks';
 import Carousel from "./carousel/carousel"
+import Popipoo from "./popipoo/popipoo.JSX"  // Changed .jsx to .JSX to match the actual file
 
 const Home = () => {
   return (
@@ -55,17 +56,19 @@ const Home = () => {
 
           {/* Imagen del Banner */}
           <div className="w-2/5 flex justify-center">
-            <img src="src/assets/img/Lumi N0va 2.png" alt="Perfil" id="banner-img-1" className="w-56 md:w-80 rounded-4xl shadow-lg hover:scale-105 transition-transform" />
+            <img src="/src/assets/img/Lumi N0va 2.png" alt="Perfil" id="banner-img-1" className="w-56 md:w-80 rounded-4xl shadow-lg hover:scale-105 transition-transform" />
           </div>
         </section>
 
         {/* Sección de Proyectos con Carrusel */}
         <Carousel/>
-
         {/* Sección de Desarrollo Web */}
+
+        <Popipoo/>
+
         <section className="h-125 mt-6 flex flex-col-reverse md:flex-row items-center justify-between max-w-7xl mx-auto p-6 bg-coral-brand-300 rounded-2xl shadow-md gap-x-4">
           <div className="w-2/5 flex justify-center">
-            <img src="src/assets/img/yotsuba_nakano.png" alt="Perfil" className="w-56 md:w-60 rounded-4xl hover:scale-105 transition-transform"/>
+            <img src="/src/assets/img/yotsuba_nakano.png" alt="Perfil" className="w-56 md:w-60 rounded-4xl hover:scale-105 transition-transform"/>
           </div>
           <div className="p-4 w-3/5 text-center">
             <h2 className="text-4xl mb-6 font-bold">Desarrollo Web & Diseño Creativo</h2>
@@ -78,7 +81,7 @@ const Home = () => {
         {/* Sección de Multimedia */}
         <section className="h-125 mt-6 flex flex-col-reverse md:flex-row-reverse items-center justify-between max-w-7xl mx-auto p-6 bg-violet-brand-900 rounded-2xl shadow-md gap-x-4">
           <div className="w-2/5 flex justify-center">
-            <img src="src/assets/img/el-chambeador.jpg" alt="IMG" className="w-56 md:w-80 rounded-4xl shadow-lg hover:scale-105 transition-transform"/>
+            <img src="/src/assets/img/el-chambeador.jpg" alt="IMG" className="w-56 md:w-80 rounded-4xl shadow-lg hover:scale-105 transition-transform"/>
           </div>
           <div className="p-4 w-3/5 text-center">
             <h2 className="text-4xl text-white mb-6 font-bold">Multimedia & Producción Creativa</h2>

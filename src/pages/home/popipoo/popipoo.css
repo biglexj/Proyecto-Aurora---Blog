@@ -1,0 +1,84 @@
+.banner {
+  min-height: 600px;
+  height: calc(100% - 4rem);
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  margin: 2rem 0;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner .slider {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: -15% auto 0;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  animation: autoRun 60s linear infinite;
+}
+
+.banner .slider .item {
+  position: absolute;
+  inset: 0;
+  transform: 
+    rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+    translateZ(400px);
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.banner .slider.paused {
+  animation-play-state: paused;
+}
+
+.banner .slider .item > div {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(2px);
+  transform: scale(0.85);
+  transition: transform 0.3s ease;
+}
+
+.banner .slider .item:hover > div {
+  transform: scale(1);
+}
+
+@keyframes autoRun {
+  from {
+    transform: perspective(1000px) rotateX(-4deg) rotateY(0deg);
+  }
+  to {
+    transform: perspective(1000px) rotateX(-5deg) rotateY(360deg);
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .banner .slider {
+    width: 200px;
+    height: 300px;
+  }
+  
+  .banner .slider .item {
+    transform: 
+      rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+      translateZ(280px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .banner .slider {
+    width: 250px;
+    height: 350px;
+  }
+  
+  .banner .slider .item {
+    transform: 
+      rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+      translateZ(210px);
+  }
+}

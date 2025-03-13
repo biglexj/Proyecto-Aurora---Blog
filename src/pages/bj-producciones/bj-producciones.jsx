@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/Marca/Logo.jpg';
+import logo from '/src/assets/Marca/@biglexpe/Logo 1.0.jpg';
 import videosData from './yt-videos.json';
 import frames from './animationFrames';
 
