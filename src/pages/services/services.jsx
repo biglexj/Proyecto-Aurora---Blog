@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '/src/assets/Marca/@biglexj/Logo.jpg';
+import logo from '/assets/Marca/@biglexj/Logo.jpg';
 import VideoEditing from './components/VideoEditing';
 import GraphicDesign from './components/GraphicDesign';
 import KaraokeTracks from './components/KaraokeTracks';
@@ -40,7 +40,7 @@ const Services = () => {
         </div>
 
         <div className="w-2/5 flex justify-center">
-            <img src="/src/assets/Marca/biglexdev/Logo 1.0.jpg" alt="Perfil" className="w-56 md:w-80 rounded-4xl shadow-lg hover:scale-105 transition-transform" />
+            <img src="/assets/Marca/biglexdev/Logo 1.0.jpg" alt="Perfil" className="w-56 md:w-80 rounded-4xl shadow-lg hover:scale-105 transition-transform" />
           </div>
       </section>
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import html2canvas from 'html2canvas';
-import logo from '/src/assets/Marca/@biglexj/Logo.jpg';
+import logo from '/assets/Marca/@biglexj/Logo.jpg';
 
 const CloneTwitterUI = () => {
   const [currentDate, setCurrentDate] = useState('');

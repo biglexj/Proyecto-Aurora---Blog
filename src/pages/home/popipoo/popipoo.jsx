@@ -1,9 +1,16 @@
-import React from 'react';
-import channelsData from '/src/pages/home/popipoo/channel-yt.json';
+import React, { useState, useEffect } from 'react';
 import './popipoo.css';
 
 const Popipoo = () => {
+  const [channelsData, setChannelsData] = useState([]);
   const totalChannels = channelsData.length;
+
+  useEffect(() => {
+    fetch('/assets/data/channel-yt.json')
+      .then(response => response.json())
+      .then(data => setChannelsData(data))
+      .catch(error => console.error('Error loading channels:', error));
+  }, []);
 
   const handleClick = (e) => {
     const slider = e.currentTarget.closest('.slider');
@@ -34,7 +41,7 @@ const Popipoo = () => {
                     className="w-16 h-16 rounded-full"
                   />
                   <div>
-                    <h3 className="text-2xl font-bold">{channel.channel.name}</h3>
+                    <h3 className="text-xl font-bold">{channel.channel.name}</h3>
                     <p className="text-gray-600">{channel.channel.subscribers} suscriptores</p>
                   </div>
                 </div>
@@ -45,7 +52,7 @@ const Popipoo = () => {
                   {channel.channel.content.map((tag, idx) => (
                     <span 
                       key={idx}
-                      className="bg-yellow-lemon-100 text-yellow-lemon-800 px-3 py-1 rounded-full text-sm"
+                      className="bg-pink-panther-400 text-white px-3 py-1 rounded-full text-sm"
                     >
                       {tag}
                     </span>
@@ -56,7 +63,7 @@ const Popipoo = () => {
                   href={channel.channel.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block bg-yellow-lemon-500 text-white px-6 py-2 rounded-lg hover:bg-yellow-lemon-600 transition-colors"
+                  className="inline-block bg-pink-panther-500 text-white px-6 py-2 rounded-lg hover:bg-pink-panther-500 transition-colors"
                 >
                   Visitar Canal
                 </a>

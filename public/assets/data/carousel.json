@@ -1,30 +1,30 @@
 [
     {
-        "image": "src/assets/img/Especial de 14 de febrero.png",
+        "image": "/assets/YouTube/@biglexj/Especial de 14 de febrero.png",
         "title": "Nuevo video YouTube",
         "description": "Especial de San Valentín - Cover de canciones románticas",
         "link": "https://youtube.com/@biglexj"  
     },
     {
-        "image": "src/assets/img/Lumi N0va 2.png",
+        "image": "/assets/img/Lumi N0va 2.png",
         "title": "Karaoke Project",
         "description": "Nueva colección de karaokes personalizados",
         "link": "https://youtube.com/@biglexj"
     },
     {
-        "image": "src/assets/img/Pelicula.png",
+        "image": "/assets/YouTube/@biglexj/Pelicula.png",
         "title": "Portfolio Web",
         "description": "Desarrollo de sitios web modernos y responsivos",
         "link": "https://github.com/biglexj"
     },
     {
-        "image": "src/assets/img/Tableta Grafica.png",
+        "image": "/assets/YouTube/@biglexj/Tableta Grafica.png",
         "title": "Edición de Video",
         "description": "Servicios de edición profesional para contenido digital",
         "link": "https://www.instagram.com/biglexj"
     },
     {
-        "image": "src/assets/img/Lumi N0va 2.png",
+        "image": "/assets/img/Lumi N0va 2.png",
         "title": "Producción Musical",
         "description": "Creación de pistas y arreglos musicales",
         "link": "https://youtube.com/@biglexj"

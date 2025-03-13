@@ -1,18 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import projectsData from './data.json';
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [projectsData, setProjectsData] = useState([]);
   const totalProjects = projectsData.length;
   const itemsPerView = 3;
   const totalGroups = Math.ceil(totalProjects / itemsPerView);
+
+  useEffect(() => {
+    fetch('/assets/data/carousel.json')
+      .then(response => response.json())
+      .then(data => setProjectsData(data))
+      .catch(error => console.error('Error loading projects:', error));
+  }, []);
 
   const getVisibleProjects = () => {
     const start = currentIndex * itemsPerView;
     const end = start + itemsPerView;
     const visibleItems = [...projectsData.slice(start, end)];
     
-    // Rellenar con elementos del principio si es necesario
     if (visibleItems.length < itemsPerView) {
       const remaining = itemsPerView - visibleItems.length;
       visibleItems.push(...projectsData.slice(0, remaining));
