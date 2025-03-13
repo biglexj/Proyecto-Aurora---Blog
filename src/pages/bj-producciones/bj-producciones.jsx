@@ -4,7 +4,7 @@ import logo from '/assets/Marca/@biglexpe/Logo 1.0.jpg';
 
 const BJProducciones = () => {
   const [videos, setVideos] = useState({});
-  const [currentFrame, setCurrentFrame] = useState(0);
+  const [animationFrame, setAnimationFrame] = useState(1);
   const totalFrames = 60; // Total number of frames
 
   // Fetch videos data from public directory
@@ -27,20 +27,19 @@ const BJProducciones = () => {
 
   // Manejamos el clic del video con useCallback para mejor rendimiento
   const handleVideoClick = useCallback((videoId, event) => {
-    const videoBox = event.target.parentElement;
+    const imageContainer = event.target;
     
     const iframe = document.createElement('iframe');
     iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
     iframe.setAttribute('frameborder', '0');
     iframe.setAttribute('allowfullscreen', '');
     iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+    iframe.className = 'w-full h-auto rounded';
     
     const loader = document.createElement('div');
     loader.className = 'loader';
     
-    videoBox.innerHTML = '';
-    videoBox.appendChild(loader);
-    videoBox.appendChild(iframe);
+    imageContainer.replaceWith(iframe);
     
     iframe.onload = () => {
       loader.style.display = 'none';
@@ -54,17 +53,17 @@ const BJProducciones = () => {
     if (!animation) return;
 
     const animar = () => {
-      if (currentFrame < totalFrames) {
-        animation.src = `/assets/animate-logo/frame-${currentFrame + 1}.png`;
-        setCurrentFrame(prev => prev + 1);
-      } else {
-        clearInterval(intervalo);
-      }
+      setAnimationFrame(prev => {
+        const nextFrame = prev < totalFrames ? prev + 1 : 1;
+        animation.src = `/assets/animate-logo/frame-${nextFrame}.png`;
+        return nextFrame;
+      });
     };
 
     const iniciarAnimacion = () => {
-      setCurrentFrame(0);
       clearInterval(intervalo);
+      setAnimationFrame(1);
+      animation.src = `/assets/animate-logo/frame-1.png`;
       intervalo = setInterval(animar, 1000 / 20);
     };
 
@@ -75,7 +74,7 @@ const BJProducciones = () => {
       clearInterval(intervalo);
       animation.removeEventListener('click', iniciarAnimacion);
     };
-  }, [currentFrame]);
+  }, [totalFrames]);
 
   return (
     <main className='min-h-screen text-primary-white'>
@@ -113,7 +112,7 @@ const BJProducciones = () => {
               </div>
               <div className="w-2/5 flex justify-center">
                 <img 
-                  src={`/assets/animate-logo/frame-1.png`} 
+                  src={`/assets/animate-logo/frame-${animationFrame}.png`} 
                   alt="Animación" 
                   id='logo-animated'
                   className="w-56 md:w-80 rounded-4xl shadow-lg hover:scale-105 transition-transform"
