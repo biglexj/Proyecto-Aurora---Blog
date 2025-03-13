@@ -1,25 +1,14 @@
-import React, { useState } from 'react';
-import channelsData from './channel-yt.json';
+import React from 'react';
+import channelsData from '/src/pages/home/popipoo/channel-yt.json';
 import './popipoo.css';
 
 const Popipoo = () => {
-  const [currentChannel, setCurrentChannel] = useState(0);
   const totalChannels = channelsData.length;
-
-  const nextChannel = () => {
-    setCurrentChannel((prev) => (prev + 1) % totalChannels);
-  };
-
-  const prevChannel = () => {
-    setCurrentChannel((prev) => (prev - 1 + totalChannels) % totalChannels);
-  };
 
   const handleClick = (e) => {
     const slider = e.currentTarget.closest('.slider');
     slider.classList.toggle('paused');
   };
-  
-  // Add onClick={handleClick} to your item div
   
   return (
     <section className="h-260 p-10 mt-6 max-w-7xl mx-auto rounded-2xl shadow-md">
@@ -31,6 +20,7 @@ const Popipoo = () => {
             <div 
               key={channel.video}
               className="item"
+              onClick={handleClick}
               style={{
                 '--position': index + 1,
                 '--quantity': totalChannels

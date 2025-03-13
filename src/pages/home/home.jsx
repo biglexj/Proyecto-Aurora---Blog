@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "/src/assets/Marca/@biglexj/Logo.jpg";
 import SocialLinks from '../Social-Links/SocialLinks';
 import Carousel from "./carousel/carousel"
-import Popipoo from "./popipoo/popipoo.JSX"  // Changed .jsx to .JSX to match the actual file
+import Popipoo from "./popipoo/popipoo"
 
 const Home = () => {
   return (
