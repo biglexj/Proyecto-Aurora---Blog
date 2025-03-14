@@ -72,9 +72,13 @@ const Home = () => {
           </div>
           <div className="p-4 w-3/5 text-center">
             <h2 className="text-4xl mb-6 font-bold">Desarrollo Web & Diseño Creativo</h2>
-            <p className="text-xl text-gray-700">
+            <p className="text-xl text-gray-700 mb-6">
               Transformando ideas en experiencias digitales. Especializado en desarrollo frontend, diseño de interfaces intuitivas y soluciones web innovadoras que combinan funcionalidad y estética.
             </p>
+            <Link to="/template" 
+                  className="inline-block px-6 py-2 bg-coral-brand-500 text-white rounded-xl font-semibold hover:bg-coral-brand-600 transition">
+                  Ver Template
+              </Link>
           </div>
         </section>
 

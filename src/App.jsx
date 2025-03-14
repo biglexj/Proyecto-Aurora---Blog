@@ -9,6 +9,7 @@ import Terms from './pages/Terms/Terms';
 import BJProducciones from './pages/bj-producciones/bj-producciones';
 import Services from './pages/services/services';
 import Developer from "./pages/biglex-dev/biglex-dev";
+import Template from './pages/home/popipoo/pages/template';
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/bj-producciones" element={<BJProducciones />} />
           <Route path="/services" element={<Services />} />
           <Route path="/biglex-dev" element={<Developer />} />
+          <Route path="/template" element={<Template />} />
         </Routes>
       </Router>
     </>
