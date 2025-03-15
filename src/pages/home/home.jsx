@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "/assets/Marca/@biglexj/Logo.jpg";
+import logo from "/Marca/@biglexj/biglexj.svg";
 import SocialLinks from '../Social-Links/SocialLinks';
 import Carousel from "./carousel/carousel"
 import Popipoo from "./popipoo/popipoo"
@@ -13,7 +13,7 @@ const Home = () => {
           <div className="h-18 container mx-auto flex items-center justify-between px-4">
             {/* Logo */}
             <div className="logo flex items-center">
-              <img src={logo} alt="Logo" id="logo-bar" className="rounded-full h-12 w-auto transition-transform duration-300 hover:rotate-360" />
+              <img src={logo} alt="Logo" id="logo-bar" className="bg-white rounded-full h-12 w-auto transition-transform duration-300 hover:rotate-360" />
             </div>
 
             {/* Título */}
@@ -56,7 +56,7 @@ const Home = () => {
 
           {/* Imagen del Banner */}
           <div className="w-2/5 flex justify-center">
-            <img src="/assets/img/Lumi N0va 2.png" alt="Perfil" id="banner-img-1" className="w-56 md:w-80 rounded-4xl shadow-lg hover:scale-105 transition-transform" />
+            <img src="/img/Lumi_N0va.png" alt="Perfil" id="banner-img-1" className="w-56 md:w-80 rounded-4xl shadow-lg hover:scale-105 transition-transform" />
           </div>
         </section>
 
@@ -68,7 +68,7 @@ const Home = () => {
 
         <section className="h-125 mt-6 flex flex-col-reverse md:flex-row items-center justify-between max-w-7xl mx-auto p-6 bg-coral-brand-300 rounded-2xl shadow-md gap-x-4">
           <div className="w-2/5 flex justify-center">
-            <img src="/assets/img/yotsuba_nakano.png" alt="Perfil" className="w-56 md:w-60 rounded-4xl hover:scale-105 transition-transform"/>
+            <img src="/img/yotsuba_nakano.png" alt="Perfil" className="w-56 md:w-60 rounded-4xl hover:scale-105 transition-transform"/>
           </div>
           <div className="p-4 w-3/5 text-center">
             <h2 className="text-4xl mb-6 font-bold">Desarrollo Web & Diseño Creativo</h2>
@@ -85,7 +85,7 @@ const Home = () => {
         {/* Sección de Multimedia */}
         <section className="h-125 mt-6 flex flex-col-reverse md:flex-row-reverse items-center justify-between max-w-7xl mx-auto p-6 bg-violet-brand-900 rounded-2xl shadow-md gap-x-4">
           <div className="w-2/5 flex justify-center">
-            <img src="/assets/img/el-chambeador.jpg" alt="IMG" className="w-56 md:w-80 rounded-4xl shadow-lg hover:scale-105 transition-transform"/>
+            <img src="/img/el-chambeador.jpg" alt="IMG" className="w-56 md:w-80 rounded-4xl shadow-lg hover:scale-105 transition-transform"/>
           </div>
           <div className="p-4 w-3/5 text-center">
             <h2 className="text-4xl text-white mb-6 font-bold">Multimedia & Producción Creativa</h2>

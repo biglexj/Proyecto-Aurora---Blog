@@ -8,7 +8,7 @@ const Carousel = () => {
   const totalGroups = Math.ceil(totalProjects / itemsPerView);
 
   useEffect(() => {
-    fetch('/assets/data/carousel.json')
+    fetch('/data/carousel.json')
       .then(response => response.json())
       .then(data => setProjectsData(data))
       .catch(error => console.error('Error loading projects:', error));

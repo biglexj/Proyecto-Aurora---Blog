@@ -6,7 +6,7 @@ const Popipoo = () => {
   const totalChannels = channelsData.length;
 
   useEffect(() => {
-    fetch('/assets/data/channel-yt.json')
+    fetch('/data/channel-yt.json')
       .then(response => response.json())
       .then(data => setChannelsData(data))
       .catch(error => console.error('Error loading channels:', error));

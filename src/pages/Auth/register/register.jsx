@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "/assets/Marca/@biglexj/Logo.jpg";
+import logo from "/Marca/@biglexj/biglexj.svg";
 
 const Register = () => {
   return (
@@ -10,7 +10,7 @@ const Register = () => {
         <div className="bg-pink-panther-300 w-115 p-6 rounded-3xl flex flex-col items-center">
             {/* Logo y Nombre */}
             <div className="flex items-center mt-8 mb-4 w-80">
-            <img src={logo} alt="Logo" className="h-13 rounded-full" />
+            <img src={logo} alt="Logo" className="bg-white h-13 rounded-full" />
             <p className="font-kefa ml-2 text-2xl text-dark font-semibold">Company</p>
             </div>
 

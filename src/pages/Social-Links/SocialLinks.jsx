@@ -1,8 +1,8 @@
 import React from 'react';
-import youtube from '/assets/logos/youtube.png';
-import tiktok from '/assets/logos/TikTok.png';
-import facebook from '/assets/logos/facebook.png';
-import instagram from '/assets/logos/instagram.png';
+import youtube from '/logos/YouTube/youtube.svg';
+import tiktok from '/logos/TikTok/tiktok.svg';
+import facebook from '/logos/Facebook/facebook.svg';
+import instagram from '/logos/Instagram/instagram.svg';
 
 const SocialLinks = () => {
   return (

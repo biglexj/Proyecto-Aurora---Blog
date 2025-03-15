@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '/assets/Marca/@biglexpe/Logo 1.0.jpg';
+import logo from '/Marca/@biglexpe/biglexpe.svg';
 
 const BJProducciones = () => {
   const [videos, setVideos] = useState({});
@@ -9,7 +9,7 @@ const BJProducciones = () => {
 
   // Fetch videos data from public directory
   useEffect(() => {
-    fetch('/assets/data/yt-videos.json')
+    fetch('/data/yt-videos.json')
       .then(response => response.json())
       .then(videosData => {
         const videosByGenre = {};
@@ -55,7 +55,7 @@ const BJProducciones = () => {
     const animar = () => {
       setAnimationFrame(prev => {
         const nextFrame = prev < totalFrames ? prev + 1 : 1;
-        animation.src = `/assets/animate-logo/frame-${nextFrame}.png`;
+        animation.src = `/animate-logo/frame-${nextFrame}.png`;
         return nextFrame;
       });
     };
@@ -63,7 +63,7 @@ const BJProducciones = () => {
     const iniciarAnimacion = () => {
       clearInterval(intervalo);
       setAnimationFrame(1);
-      animation.src = `/assets/animate-logo/frame-1.png`;
+      animation.src = `/animate-logo/frame-1.png`;
       intervalo = setInterval(animar, 1000 / 20);
     };
 
@@ -112,7 +112,7 @@ const BJProducciones = () => {
               </div>
               <div className="w-2/5 flex justify-center">
                 <img 
-                  src={`/assets/animate-logo/frame-${animationFrame}.png`} 
+                  src={`/animate-logo/frame-${animationFrame}.png`} 
                   alt="Animación" 
                   id='logo-animated'
                   className="w-56 md:w-80 rounded-4xl shadow-lg hover:scale-105 transition-transform"

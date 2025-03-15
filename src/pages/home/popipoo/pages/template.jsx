@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '/assets/Marca/@biglexj/Logo.jpg';
+import logo from '/Marca/@biglexj/biglexj.svg';
 
 const Section1 = () => (
   <div className="relative h-screen w-full">
