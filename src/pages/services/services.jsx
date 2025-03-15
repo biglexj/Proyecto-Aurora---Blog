@@ -24,26 +24,28 @@ const Services = () => {
         </div>
       </header>
       
-      <section className="h-auto mt-6 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto p-4 md:p-6 bg-pink-panther-300 rounded-2xl shadow-md gap-4 md:gap-x-4">
-        <div className="w-full md:w-3/5 order-2 md:order-1">
-          <h2 className="text-3xl md:text-5xl mb-4 md:mb-6 font-bold text-center text-gray-800">
-            Edición, Diseño y Pistas en un Solo Lugar
-          </h2>
-          <p className="mb-6 md:mb-10 text-center font-medium text-dark text-lg md:text-xl">
-          Biglex J servicios Ofrecemos edición de video y fotografía, diseño gráfico profesional y desarrollo web para proyectos únicos y personalizados. Transformamos tus ideas en realidad y llevamos tu marca al siguiente nivel. ¡Destaca con estilo y creatividad!
-          </p> 
-          <div className="flex justify-center">
-            <a href="https://www.youtube.com/@biglexj" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-lg md:text-xl bg-pink-panther-500 text-white px-4 md:px-6 py-2 rounded-xl font-semibold hover:bg-pink-panther-600 transition">
-              Suscríbete
-            </a>
+      <section className="h-auto md:h-125 mt-6 max-w-7xl mx-auto p-4 md:p-6 bg-pink-panther-300 rounded-2xl shadow-md">
+        <div className="flex flex-col md:flex-row items-center justify-between h-full">
+          <div className="p-8 w-full md:w-3/5 order-2 md:order-1">
+            <h2 className="text-3xl md:text-5xl mb-4 md:mb-6 font-bold text-center text-gray-800">
+              Edición, Diseño y Pistas en un Solo Lugar
+            </h2>
+            <p className="mb-6 md:mb-10 text-center font-medium text-dark text-lg md:text-xl">
+            Biglex J servicios Ofrecemos edición de video y fotografía, diseño gráfico profesional y desarrollo web para proyectos únicos y personalizados. Transformamos tus ideas en realidad y llevamos tu marca al siguiente nivel. ¡Destaca con estilo y creatividad!
+            </p> 
+            <div className="flex justify-center">
+              <a href="https://www.youtube.com/@biglexj" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-lg md:text-xl bg-pink-panther-500 text-white px-4 md:px-6 py-2 rounded-xl font-semibold hover:bg-pink-panther-600 transition">
+                Suscríbete
+              </a>
+            </div>
           </div>
-        </div>
 
-        <div className="w-full md:w-2/5 flex justify-center order-1 md:order-2 mb-4 md:mb-0">
-          <img src="/Marca/@biglexj/biglexj.svg" alt="Perfil" className="bg-white w-48 sm:w-56 md:w-64 lg:w-80 rounded-4xl shadow-lg hover:scale-105 transition-transform" />
+          <div className="w-full md:w-2/5 flex justify-center order-1 md:order-2 mb-6 md:mb-0">
+            <img src="/Marca/@biglexj/biglexj.svg" alt="Perfil" className="bg-white w-48 sm:w-56 md:w-64 lg:w-72 rounded-4xl shadow-lg hover:scale-105 transition-transform mx-auto" />
+          </div>
         </div>
       </section>
 

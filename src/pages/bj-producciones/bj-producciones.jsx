@@ -95,36 +95,36 @@ const BJProducciones = () => {
               </div>
             </header>
   
-            <section className="h-auto mt-6 max-w-7xl mx-auto p-4 md:p-6 bg-pink-panther-300 rounded-2xl shadow-md">
-              <div className="flex flex-col items-center justify-center text-center">
-                <div className="content cbjp1 w-full md:w-4/5 lg:w-3/4 mx-auto mb-6">
+            <section className="h-auto md:h-125 mt-6 max-w-7xl mx-auto p-4 md:p-6 bg-pink-panther-300 rounded-2xl shadow-md">
+              <div className="flex flex-col md:flex-row items-center justify-between h-full">
+                <div className="p-8 w-full md:w-3/5 order-1 md:order-1">
                   <h1 className="text-3xl md:text-5xl mb-4 md:mb-6 font-bold text-center text-gray-800">
                     🎤 Donde la música toma control de tu voz 🎶
                   </h1>
                   <p className="mb-6 md:mb-8 text-center font-medium text-dark text-lg md:text-xl">
                     Bienvenidos al rincón musical de Biglex J Producciones, donde encontrarás karaokes únicos para cantar tus canciones favoritas. 🎵
                   </p>
+                  
+                  <div className="flex justify-center mb-6 md:mb-0">
+                    <a href="https://www.youtube.com/@biglexpe" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       className="text-lg md:text-xl bg-pink-panther-500 text-white px-4 md:px-6 py-2 rounded-xl font-semibold hover:bg-pink-panther-600 transition">
+                      Suscríbete
+                    </a>
+                  </div>
                 </div>
                 
-                <div className="w-full flex justify-center mb-6 md:mb-8">
+                <div className="w-full md:w-2/5 flex justify-center order-2 md:order-2 mb-6 md:mb-0">
                   <div className="relative inline-block">
                     <img 
                       src={`/animate-logo/frame-${animationFrame}.png`} 
                       alt="Animación" 
                       id='logo-animated'
-                      className="w-48 sm:w-56 md:w-64 lg:w-80 rounded-4xl shadow-lg hover:scale-105 transition-transform mx-auto"
+                      className="w-48 sm:w-56 md:w-64 lg:w-72 rounded-4xl shadow-lg hover:scale-105 transition-transform mx-auto"
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-pink-panther-300/20 rounded-4xl pointer-events-none"></div>
                   </div>
-                </div>
-                
-                <div className="flex justify-center">
-                  <a href="https://www.youtube.com/@biglexpe" 
-                     target="_blank" 
-                     rel="noopener noreferrer"
-                     className="text-lg md:text-xl bg-pink-panther-500 text-white px-4 md:px-6 py-2 rounded-xl font-semibold hover:bg-pink-panther-600 transition">
-                    Suscríbete
-                  </a>
                 </div>
               </div>
             </section>
