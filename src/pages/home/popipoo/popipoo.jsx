@@ -21,7 +21,7 @@ const Popipoo = () => {
     <section className="h-auto p-4 md:p-10 mt-6 max-w-7xl mx-auto rounded-2xl shadow-md bg-green-creativity-300">
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-kefa font-bold text-center mb-4 md:mb-8">Mis Canales</h2>
       <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-3 md:mb-5">Explora Mis Canales de YouTube</h2>
-      <p className="text-base md:text-lg lg:text-xl mb-8 text-center md:mb-10 max-w-3xl mx-auto">
+      <p className="text-base md:text-lg lg:text-xl text-center max-w-3xl mx-auto">
           Descubre contenido variado en mis diferentes canales. Haz clic en las tarjetas para pausar la rotación y explorar cada canal.
       </p>
 
