@@ -1,8 +1,9 @@
 import React from 'react';
 import youtube from '/logos/YouTube/youtube.svg';
-import tiktok from '/logos/TikTok/tiktok.svg';
+import tiktok from '/logos/TikTok/tiktokwhite.svg';
 import facebook from '/logos/Facebook/facebook.svg';
 import instagram from '/logos/Instagram/instagram.svg';
+import discord from '/logos/Discord/discordwhite.svg';
 
 const SocialLinks = () => {
   return (
@@ -18,7 +19,7 @@ const SocialLinks = () => {
           <img 
             src={youtube} 
             alt="YouTube" 
-            className="w-10 h-10 md:w-12 md:h-12 rounded-full"
+            className="bg-white p-1.5 w-10 h-10 md:w-12 md:h-12 rounded-full"
           />
         </a>
         <a 
@@ -30,7 +31,7 @@ const SocialLinks = () => {
           <img 
             src={tiktok} 
             alt="TikTok" 
-            className="w-10 h-10 md:w-12 md:h-12 rounded-full"
+            className="bg-black p-1.5 w-10 h-10 md:w-12 md:h-12 rounded-full"
           />
         </a>
         <a 
@@ -57,6 +58,20 @@ const SocialLinks = () => {
             className="w-10 h-10 md:w-12 md:h-12 rounded-full"
           />
         </a>
+
+        <a
+          href="https://discord.gg/f5crHcpHKW"
+          className="mx-2.5"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src={discord}
+            alt="Discord"
+            className="bg-[#5865F2] p-1.5 w-10 h-10 md:w-12 md:h-12 rounded-full"
+          />
+        </a>
+
       </div>
     </footer>
   );
