@@ -46,10 +46,10 @@ const Home = () => {
 
               {/* Botones*/}
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Link to="/register" className="text-lg md:text-xl bg-pink-panther-500 text-white px-4 md:px-6 py-2 rounded-xl font-semibold hover:bg-pink-panther-600 transition w-full sm:w-auto">
+                <Link to="/register" className="text-center text-lg md:text-xl bg-pink-panther-500 text-white px-4 md:px-6 py-2 rounded-xl font-semibold hover:bg-pink-panther-600 transition w-full sm:w-auto">
                   Registrarse
                 </Link>
-                <Link to="/login" className="text-lg md:text-xl bg-green-creativity-500 text-white px-4 md:px-6 py-2 rounded-xl font-semibold hover:bg-green-creativity-600 transition w-full sm:w-auto">
+                <Link to="/login" className="text-center text-lg md:text-xl bg-green-creativity-500 text-white px-4 md:px-6 py-2 rounded-xl font-semibold hover:bg-green-creativity-600 transition w-full sm:w-auto">
                   Iniciar Sesión
                 </Link>
               </div>
