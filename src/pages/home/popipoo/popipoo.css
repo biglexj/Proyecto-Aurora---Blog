@@ -1,10 +1,8 @@
 .banner {
-  min-height: 600px;
-  height: calc(100% - 4rem);
+  
   text-align: center;
   overflow: hidden;
   position: relative;
-  margin: 2rem 0;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
@@ -12,14 +10,55 @@
   align-items: center;
 }
 
+/* El orden de las media queries es importante - deben ir de menor a mayor */
+@media screen and (min-width: 420px) {
+  .banner {
+    height: 450px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .banner {
+    height: 600px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .banner {
+    height: 700px;
+  }
+}
+
 .banner .slider {
   position: relative;
-  width: 300px;
-  height: 400px;
-  margin: -15% auto 0;
+  width: 200px;
+  height: 300px;
+  margin: -10% auto 0;
   transform-style: preserve-3d;
   transform: perspective(1000px);
   animation: autoRun 60s linear infinite;
+}
+
+/* Ajustamos el tamaño del slider para diferentes pantallas */
+@media screen and (min-width: 420px) {
+  .banner .slider {
+    width: 220px;
+    height: 350px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .banner .slider {
+    width: 280px;
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .banner .slider {
+    width: 350px;
+    height: 430px;
+  }
 }
 
 .banner .slider .item {
@@ -27,9 +66,25 @@
   inset: 0;
   transform: 
     rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-    translateZ(400px);
+    translateZ(210px);
   transition: transform 0.5s ease;
-  cursor: pointer;
+  cursor: pointer; 
+}
+
+@media screen and (min-width: 640px) {
+  .banner .slider .item {
+    transform: 
+      rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+      translateZ(280px);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .banner .slider .item {
+    transform: 
+      rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+      translateZ(400px);
+  }
 }
 
 .banner .slider.paused {
@@ -54,31 +109,5 @@
   }
   to {
     transform: perspective(1000px) rotateX(-5deg) rotateY(360deg);
-  }
-}
-
-@media screen and (max-width: 1023px) {
-  .banner .slider {
-    width: 200px;
-    height: 300px;
-  }
-  
-  .banner .slider .item {
-    transform: 
-      rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-      translateZ(280px);
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .banner .slider {
-    width: 250px;
-    height: 350px;
-  }
-  
-  .banner .slider .item {
-    transform: 
-      rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-      translateZ(210px);
   }
 }

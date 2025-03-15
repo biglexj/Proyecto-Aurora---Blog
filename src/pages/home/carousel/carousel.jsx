@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [projectsData, setProjectsData] = useState([]);
-  const totalProjects = projectsData.length;
-  const itemsPerView = 3;
-  const totalGroups = Math.ceil(totalProjects / itemsPerView);
-
+  const [itemsPerView, setItemsPerView] = useState(3);
+  
   useEffect(() => {
     fetch('/data/carousel.json')
       .then(response => response.json())
@@ -14,7 +12,27 @@ const Carousel = () => {
       .catch(error => console.error('Error loading projects:', error));
   }, []);
 
-  const getVisibleProjects = () => {
+  // Ajustar elementos por vista según el ancho de la pantalla
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        setItemsPerView(1);
+      } else if (window.innerWidth < 1024) {
+        setItemsPerView(2);
+      } else {
+        setItemsPerView(3);
+      }
+    };
+
+    handleResize(); // Ejecutar al inicio
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const totalProjects = projectsData.length;
+  const totalGroups = Math.ceil(totalProjects / itemsPerView);
+
+  const getVisibleProjects = useCallback(() => {
     const start = currentIndex * itemsPerView;
     const end = start + itemsPerView;
     const visibleItems = [...projectsData.slice(start, end)];
@@ -25,7 +43,7 @@ const Carousel = () => {
     }
     
     return visibleItems;
-  };
+  }, [currentIndex, itemsPerView, projectsData]);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => 
@@ -48,30 +66,43 @@ const Carousel = () => {
   }, []);
 
   return (
-    <section className="h-auto mt-6 flex flex-col max-w-7xl mx-auto p-6 bg-violet-brand-300 rounded-2xl shadow-md">
-      <h1 className="text-4xl font-bold text-center mb-8">Proyectos en los que estoy trabajando</h1>
+    <section className="h-auto mt-6 flex flex-col max-w-7xl mx-auto p-4 md:p-6 bg-violet-brand-300 rounded-2xl shadow-md">
+      <h1 className="text-2xl md:text-4xl font-bold text-center mb-4 md:mb-8">Proyectos en los que estoy trabajando</h1>
       <div className="relative flex items-center">
-        <button onClick={prevSlide} className="carousel-nav-btn prev absolute left-0 z-10 bg-violet-brand-500 text-white p-4 rounded-l-xl hover:bg-violet-brand-600 transition-colors">
+        <button 
+          onClick={prevSlide} 
+          className="carousel-nav-btn prev absolute left-0 z-10 bg-violet-brand-500 text-white p-2 md:p-4 rounded-l-xl hover:bg-violet-brand-600 transition-colors"
+          aria-label="Anterior proyecto"
+        >
           &lt;
         </button>
-        <div className="flex-1 overflow-hidden px-12">
+        <div className="flex-1 overflow-hidden px-8 md:px-12">
           <div className="flex transition-transform duration-500 ease-in-out">
-            <div className="flex gap-4 w-full">
+            <div className="flex gap-2 md:gap-4 w-full">
               {getVisibleProjects().map((project, index) => (
-                <div key={`${currentIndex}-${index}`} className="flex-none w-[calc(33.333%-1rem)] bg-white p-4 rounded-lg shadow-md">
+                <div 
+                  key={`${currentIndex}-${index}`} 
+                  className={`flex-none bg-white p-3 md:p-4 rounded-lg shadow-md ${
+                    itemsPerView === 1 
+                      ? 'w-full' 
+                      : itemsPerView === 2 
+                        ? 'w-[calc(50%-0.5rem)]' 
+                        : 'w-[calc(33.333%-1rem)]'
+                  }`}
+                >
                   <img 
                     src={project.image} 
                     alt={project.title} 
-                    className="w-full h-48 object-cover rounded-lg"
+                    className="w-full h-32 md:h-48 object-cover rounded-lg"
                   />
-                  <h2 className="text-xl font-bold mt-2 text-gray-800">{project.title}</h2>
-                  <p className="text-gray-600 mb-2">{project.description}</p>
+                  <h2 className="text-lg md:text-xl font-bold mt-2 text-gray-800 line-clamp-1">{project.title}</h2>
+                  <p className="text-sm md:text-base text-gray-600 mb-2 line-clamp-2">{project.description}</p>
                   <div className="flex justify-center">
                     <a 
                       href={project.link} 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="text-white text-center hover:underline pt-2 pb-2 px-4 rounded-lg bg-pink-panther-500 hover:bg-pink-panther-600 transition-colors"
+                      className="text-white text-center hover:underline text-sm md:text-base pt-1 pb-1 md:pt-2 md:pb-2 px-3 md:px-4 rounded-lg bg-pink-panther-500 hover:bg-pink-panther-600 transition-colors"
                     >
                       Ver
                     </a>
@@ -81,7 +112,11 @@ const Carousel = () => {
             </div>
           </div>
         </div>
-        <button onClick={nextSlide} className="carousel-nav-btn next absolute right-0 z-10 bg-violet-brand-500 text-white p-4 rounded-r-xl hover:bg-violet-brand-600 transition-colors">
+        <button 
+          onClick={nextSlide} 
+          className="carousel-nav-btn next absolute right-0 z-10 bg-violet-brand-500 text-white p-2 md:p-4 rounded-r-xl hover:bg-violet-brand-600 transition-colors"
+          aria-label="Siguiente proyecto"
+        >
           &gt;
         </button>
       </div>
@@ -90,11 +125,12 @@ const Carousel = () => {
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`w-3 h-3 rounded-full transition-colors ${
+            className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-colors ${
               index === currentIndex 
                 ? 'bg-white' 
                 : 'bg-white/50 hover:bg-white/75'
             }`}
+            aria-label={`Ir a grupo ${index + 1}`}
           />
         ))}
       </div>
