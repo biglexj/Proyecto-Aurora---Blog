@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './popipoo.css';
+// Update the import path to use the correct relative path
+import ChanelPerfil from '@components/ChanelPerfil.jsx';
 
 const Popipoo = () => {
   const [channelsData, setChannelsData] = useState([]);
   const totalChannels = channelsData.length;
 
   useEffect(() => {
-    fetch('/data/channel-yt.json')
+    // Changed to use channel-pages-yt.json instead of channel-yt.json
+    fetch('/data/channel-pages-yt.json')
       .then(response => response.json())
       .then(data => setChannelsData(data))
       .catch(error => console.error('Error loading channels:', error));
@@ -64,20 +68,20 @@ const Popipoo = () => {
                 </div>
                 
                 <div className="text-center">
-                  <a 
-                    href={channel.channel.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  {/* Fix the path to match the routes defined in App.jsx */}
+                  <Link 
+                    to={`/${channel.channel.id}`}
                     className="text-xl sm:text-xs md:text-xl lg:text-2xl font-bold mt-3 sm:mt-1 md:mt-2 lg:mt-3 px-3 py-1 sm:px-2 sm:py-1 md:px-4 md:py-2 lg:px-6 inline-block bg-pink-panther-500 text-white rounded-lg hover:bg-pink-panther-600 transition-colors"
                   >
                     Visitar Canal
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
           ))}
         </div>
       </div>
+      <ChanelPerfil/>
     </section>
   );
 };

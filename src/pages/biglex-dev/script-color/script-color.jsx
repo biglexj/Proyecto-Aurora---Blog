@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
+import { ChromePicker } from 'react-color';
 
 const ScriptColor = () => {
   const [hexInput, setHexInput] = useState('#3498db');
@@ -58,7 +59,7 @@ const ScriptColor = () => {
     return `#${r}${g}${b}`;
   };
 
-  const generatePastelColor = () => {
+  const generatePastelColor = useCallback(() => {
     if (!/^#([0-9A-F]{3}){1,2}$/i.test(hexInput)) {
       setBackgroundColor('#ffffff');
       setPastelHex('Invalid hex color');
@@ -74,11 +75,11 @@ const ScriptColor = () => {
     const pastelColor = hslToHex(hsl.h, saturation, lightness);
     setBackgroundColor(pastelColor);
     setPastelHex(pastelColor.toUpperCase());
-  };
+  }, [hexInput, saturation, lightness]);
 
   useEffect(() => {
     generatePastelColor();
-  }, [hexInput, saturation, lightness]);
+  }, [generatePastelColor]);
 
   const handleHexInput = (e) => {
     let value = e.target.value;
@@ -88,67 +89,104 @@ const ScriptColor = () => {
     setHexInput(value);
   };
 
+  const handleColorChange = (color) => {
+    setHexInput(color.hex);
+  };
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(pastelHex);
+    alert('Color copied to clipboard!');
+  };
+
   return (
     <main>
       <div className="flex flex-col items-center rounded-2xl md:p-0 p-4">
-        <div className="w-[300px] text-center bg-white rounded-lg my-8 md:my-4 p-6">
-          <h1 className="text-2xl font-bold mb-4">Generador de Colores Pastel</h1>
+        <div className="w-full max-w-4xl text-center bg-white rounded-2xl my-8 md:my-4 p-6">
+          <h1 className="text-2xl font-bold mb-8">Generador de Colores Pastel</h1>
           
-          <label htmlFor="hexInput" className="block mb-2">
-            Ingresa el color hexadecimal:
-          </label>
-          <input
-            type="text"
-            id="hexInput"
-            placeholder="#3498db"
-            maxLength="7"
-            value={hexInput}
-            onChange={handleHexInput}
-            className="w-full px-3 py-2 border rounded-md mb-4"
-          />
-
-          <div className="mb-4">
-            <div className="font-bold mb-1">
-              Saturación: <span>{saturation}%</span>
+          <div className="flex flex-col md:flex-row gap-8">
+            {/* Left Section: Color Input and Picker */}
+            <div className="flex-1">
+              <label htmlFor="hexInput" className="block mb-2 text-center">
+                Ingresa el color hexadecimal o seleciona en el cuadro:
+              </label>
+              <input
+                type="text"
+                id="hexInput"
+                placeholder="#3498db"
+                maxLength="7"
+                value={hexInput}
+                onChange={handleHexInput}
+                className="w-60 px-3 py-2 border rounded-md mb-4"
+              />
+              <div className="flex justify-center">
+                <ChromePicker 
+                  color={hexInput} 
+                  onChangeComplete={handleColorChange}
+                  styles={{
+                    default: {
+                      picker: {
+                        width: '270px', // Adjust width
+                        height: '320px', // Adjust height
+                      }
+                    }
+                  }}
+                />
+              </div>
             </div>
-            <input
-              type="range"
-              min="40"
-              max="80"
-              value={saturation}
-              onChange={(e) => setSaturation(parseInt(e.target.value))}
-              className="w-full"
-            />
-          </div>
 
-          <div className="mb-4">
-            <div className="font-bold mb-1">
-              Luminosidad: <span>{lightness}%</span>
+            {/* Right Section: Controls and Output */}
+            <div className="flex-1">
+              <div className="mb-4">
+                <div className="font-bold mb-1">
+                  Saturación: <span>{saturation}%</span>
+                </div>
+                <input
+                  type="range"
+                  min="40"
+                  max="80"
+                  value={saturation}
+                  onChange={(e) => setSaturation(parseInt(e.target.value))}
+                  className="w-60"
+                />
+              </div>
+
+              <div className="mb-4">
+                <div className="font-bold mb-1">
+                  Luminosidad: <span>{lightness}%</span>
+                </div>
+                <input
+                  type="range"
+                  min="60"
+                  max="90"
+                  value={lightness}
+                  onChange={(e) => setLightness(parseInt(e.target.value))}
+                  className="w-60"
+                />
+              </div>
+
+              <button 
+                onClick={generatePastelColor}
+                className="w-auto bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors mb-4"
+              >
+                Generar Color Pastel
+              </button>
+
+              <div 
+                className="h-24 w-24 mx-auto my-5 border border-gray-300 rounded-lg"
+                style={{ backgroundColor }}
+              />
+              <p className="font-medium">
+                Color Pastel Hex: <span className="font-bold">{pastelHex}</span>
+              </p>
+              <button 
+                onClick={copyToClipboard}
+                className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition-colors mt-2 w-auto"
+              >
+                Copiar Hex
+              </button>
             </div>
-            <input
-              type="range"
-              min="60"
-              max="90"
-              value={lightness}
-              onChange={(e) => setLightness(parseInt(e.target.value))}
-              className="w-full"
-            />
           </div>
-
-          <button 
-            onClick={generatePastelColor}
-            className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
-          >
-            Generar Color Pastel
-          </button>
-
-          <div 
-            className="h-24 w-24 mx-auto my-5 border border-gray-300 rounded-lg"
-            style={{ backgroundColor }}
-          />
-          <p className="font-medium">
-            Color Pastel Hex: <span className="font-bold">{pastelHex}</span>
-          </p>
         </div>
       </div>
     </main>

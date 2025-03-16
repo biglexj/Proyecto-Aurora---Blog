@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "/Marca/@biglexj/biglexj.svg";
-import SocialLinks from '../Social-Links/SocialLinks';
+import SocialLinks from '@components/SocialLinks';
 import Carousel from "./carousel/carousel"
 import Popipoo from "./popipoo/popipoo"
 
@@ -77,10 +77,6 @@ const Home = () => {
             <p className="text-lg md:text-xl text-gray-700 mb-4 md:mb-6">
               Transformando ideas en experiencias digitales. Especializado en desarrollo frontend, diseño de interfaces intuitivas y soluciones web innovadoras que combinan funcionalidad y estética.
             </p>
-            <Link to="/template" 
-                  className="inline-block px-4 md:px-6 py-2 bg-coral-brand-500 text-white rounded-xl font-semibold hover:bg-coral-brand-600 transition">
-                  Ver Template
-              </Link>
           </div>
         </section>
 
