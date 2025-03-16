@@ -30,7 +30,7 @@ const VideoEditing = () => {
                 <li className='ml-8'><i className='text-pink-panther-500'>&#9658;</i> Ediciones para Reels, TikTok y YouTube Shorts</li>
                 <li className='ml-8'><i className='text-pink-panther-500'>&#9658;</i> Animaciones personalizadas y transiciones impactantes.</li>
                 <li className='ml-8'><i className='text-pink-panther-500'>&#9658;</i> Optimización para formato vertical.</li>
-                <li className='ml-11 italic'>(Precios a consultar según complejidad)</li>
+                <li className='ml-13 italic'>(Precios a consultar según complejidad)</li>
               </ul>
             </div>
             <div>
@@ -39,7 +39,7 @@ const VideoEditing = () => {
                 <li className='ml-8'><i className='text-pink-panther-500'>&#9658;</i> Edición con efectos especiales: Desde transiciones hasta tracking avanzado</li>
                 <li className='ml-8'><i className='text-pink-panther-500'>&#9658;</i> Subtítulos personalizados: Perfectos para contenido en redes sociales.</li>
                 <li className='ml-8'><i className='text-pink-panther-500'>&#9658;</i> Audio mejorado: Sincronización y limpieza de pistas.</li>
-                <li className='ml-11 italic'>(Incluye consulta previa para definir el estilo y objetivos del proyecto)</li>
+                <li className='ml-13 italic'>(Incluye consulta previa para definir el estilo y objetivos del proyecto)</li>
               </ul>
             </div>
           </div>

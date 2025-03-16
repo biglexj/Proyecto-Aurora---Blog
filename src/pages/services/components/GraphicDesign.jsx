@@ -43,8 +43,8 @@ const GraphicDesign = () => {
                 <li className='ml-8'><i className='text-pink-panther-500'>&#9658;</i> Folletos publicitarios</li>
                 <li className='ml-8'><i className='text-pink-panther-500'>&#9658;</i> Revistas o catálogos</li>
                 <li className='ml-8'><i className='text-pink-panther-500'>&#9658;</i> Libros y eBooks</li>
-                <li className='ml-11'>Portada</li>
-                <li className='ml-11'>Maquetación interna</li>
+                <li className='ml-13'>Portada</li>
+                <li className='ml-13'>Maquetación interna</li>
                 <li className='ml-8'><i className='text-pink-panther-500'>&#9658;</i> Currículum o portafolios profesionales</li>
               </ul>
             </div>
