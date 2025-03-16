@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '/Marca/@biglexj/biglexj.svg';
+import CreteWeb from './components/CreteWeb';
 import VideoEditing from './components/VideoEditing';
 import GraphicDesign from './components/GraphicDesign';
 import KaraokeTracks from './components/KaraokeTracks';
@@ -50,6 +51,7 @@ const Services = () => {
       </section>
 
       <section className="container-s max-w-7xl mx-auto">
+        <CreteWeb />
         <VideoEditing />
         <GraphicDesign />
         <KaraokeTracks />
