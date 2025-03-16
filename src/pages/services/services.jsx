@@ -8,7 +8,7 @@ import KaraokeTracks from './components/KaraokeTracks';
 const Services = () => {
   return (
     <main className='min-h-screen text-primary-white'>
-      <header className="rounded-b-2xl max-w-7xl bg-green-creativity-300 text-[#333333] p-0">
+      <header className="rounded-b-2xl max-w-7xl mx-auto bg-green-creativity-300 text-[#333333] p-0">
         <div className="h-auto py-3 container mx-auto flex flex-col md:flex-row md:h-18 items-center justify-between px-4">
           <div className="flex items-center mb-4 md:mb-0">
             <div className="logo flex items-center mr-3">
