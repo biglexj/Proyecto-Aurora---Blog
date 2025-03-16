@@ -29,7 +29,7 @@ const Services = () => {
         <div className="flex flex-col md:flex-row items-center justify-between h-full">
           <div className="p-8 w-full md:w-3/5 order-2 md:order-1">
             <h2 className="text-3xl md:text-5xl mb-4 md:mb-6 font-bold text-center text-gray-800">
-              Edición, Diseño y Pistas en un Solo Lugar
+              Creatividad Digital a Tu Servicio
             </h2>
             <p className="mb-6 md:mb-10 text-center font-medium text-dark text-lg md:text-xl">
             Biglex J servicios Ofrecemos edición de video y fotografía, diseño gráfico profesional y desarrollo web para proyectos únicos y personalizados. Transformamos tus ideas en realidad y llevamos tu marca al siguiente nivel. ¡Destaca con estilo y creatividad!

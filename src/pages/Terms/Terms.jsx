@@ -7,11 +7,11 @@ const Terms = () => {
   return (
     <main className="min-h-screen bg-green-creativity-400 py-8 px-4 md:py-10">
       <div className="max-w-6xl mx-auto bg-pink-panther-200 p-6 md:p-12 rounded-2xl shadow-lg">
-        <h1 className="text-3xl font-bold text-center text-black mb-8">
+        <h1 className="text-3xl font-bold text-center text-black mb-5 md-mb-6 lg-mb-8">
           Términos y Condiciones del Sitio Web
         </h1>
 
-        <div className="space-y-6 text-gray-700 px-4 md:px-8 lg:px-16">
+        <div className="space-y-6 text-gray-700 px-1 md:px-8 lg:px-16">
           <section>
             <h2 className="text-2xl text-left font-bold text-coral-brand-700 mb-4">1. Información General</h2>
             <p className='ps-4 md:ps-10 text-left'>
