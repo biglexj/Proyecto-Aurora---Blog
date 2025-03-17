@@ -22,4 +22,16 @@ export default defineConfig({
       '@lib': path.resolve(__dirname, './src/lib'),
     },
   },
+  // Añade esta sección para manejar el enrutamiento del lado del cliente
+  server: {
+    historyApiFallback: true,
+  },
+  // Esto asegura un enrutamiento adecuado en la compilación de producción
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
+  },
 })
