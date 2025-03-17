@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './popipoo.css';
+import './Popipoo.css';
 // Update the import path to use the correct relative path
 import ChanelPerfil from '@components/ChanelPerfil';
 
