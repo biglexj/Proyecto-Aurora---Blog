@@ -25,3 +25,14 @@ dist-ssr
 
 node_modules
 experimental/
+
+# Backend
+/backend/
+/api/
+/server/
+
+# Archivos de configuración del backend que pueden contener información sensible
+.env
+.env.local
+.env.development
+.env.production
