@@ -3,25 +3,25 @@ import './App.css'
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import DarkMode from "@components/dark-mode/DarkMode";
-import Home from './pages/home/Home';
-import Login from './pages/Auth/login/login';
-import Register from './pages/Auth/register/register';
-import Terms from './pages/Terms/Terms';
+import DarkMode from "@utils/DarkMode";
+import Home from './pages/Home';
+import Login from './modules/Auth/login/login';
+import Register from './modules/Auth/register/register';
+import Terms from './modules/Terms';
 import BJProducciones from './pages/bj-producciones/bj-producciones';
 import Services from './pages/services/services';
 import Developer from "./pages/biglex-dev/biglex-dev";
 
-import BiglexJ from './pages/home/popipoo/pages/biglexj';
-import BiglexJProducciones from './pages/home/popipoo/pages/biglexpe';
-import BiglexDeveloper from './pages/home/popipoo/pages/biglexdev';
-import BiglexLive from './pages/home/popipoo/pages/biglexlive';
-import BiglexGames from './pages/home/popipoo/pages/biglexgames';
-import ElyVtuber from './pages/home/popipoo/pages/ely_vtuber';
-import MikuAndina from './pages/home/popipoo/pages/miku-andina';
+import BiglexJ from './modules/Channels/pages/biglexj';
+import BiglexJProducciones from './modules/Channels/pages/biglexpe';
+import BiglexDeveloper from './modules/Channels/pages/biglexdev';
+import BiglexLive from './modules/Channels/pages/biglexlive';
+import BiglexGames from './modules/Channels/pages/biglexgames';
+import ElyVtuber from './modules/Channels/pages/ely_vtuber';
+import MikuAndina from './modules/Channels/pages/miku-andina';
 
-import Template from './pages/home/popipoo/pages/template';
-import TemplatePerfil from './pages/home/popipoo/pages/template_perfil';
+import Template from './modules/Channels/pages/template';
+import TemplatePerfil from './modules/Channels/pages/template_perfil';
 
 const App = () => {
   return (

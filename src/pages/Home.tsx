@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "/Marca/@biglexj/biglexj.svg";
 import SocialLinks from '@components/SocialLinks';
-import Carousel from "./carousel/carousel";
-import Popipoo from "./popipoo/Popipoo";
+import Carousel from "@modules/Carousel/Carousel";
+import Popipoo from "@modules/Channels/Popipoo";
 
 const Home: React.FC = () => {
   return (
