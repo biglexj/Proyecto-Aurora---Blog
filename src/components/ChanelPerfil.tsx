@@ -1,14 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import youtube from '/logos/YouTube/youtube.svg';
 
-const ChanelPerfil = () => {
-  const [channelsData, setChannelsData] = useState([]);
-  const [loading, setLoading] = useState(true);
+interface Channel {
+  channelId: string;
+  channel: {
+    name: string;
+    link: string;
+    icon: string;
+  };
+}
+
+const ChanelPerfil: React.FC = () => {
+  const [channelsData, setChannelsData] = useState<Channel[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     fetch('/data/channel-pages-yt.json')
       .then(response => response.json())
-      .then(data => {
+      .then((data: Channel[]) => {
         setChannelsData(data);
         setLoading(false);
       })

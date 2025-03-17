@@ -1,18 +1,29 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '/Marca/@biglexpe/biglexpe.svg';
+import frames from './animationFrames';
 
-const BJProducciones = () => {
-  const [videos, setVideos] = useState({});
-  const [animationFrame, setAnimationFrame] = useState(1);
-  const totalFrames = 60; // Total number of frames
+interface Video {
+  id: string;
+  title: string;
+  tags: string[];
+}
+
+interface VideosByGenre {
+  [genre: string]: Video[];
+}
+
+const BJProducciones: React.FC = () => {
+  const [videos, setVideos] = useState<VideosByGenre>({});
+  const [animationFrame, setAnimationFrame] = useState<number>(0);
+  const totalFrames = frames.length;
 
   // Fetch videos data from public directory
   useEffect(() => {
     fetch('/data/yt-videos.json')
       .then(response => response.json())
-      .then(videosData => {
-        const videosByGenre = {};
+      .then((videosData: Video[]) => {
+        const videosByGenre: VideosByGenre = {};
         videosData.forEach(video => {
           const primaryTag = video.tags[0];
           if (!videosByGenre[primaryTag]) {
@@ -26,8 +37,8 @@ const BJProducciones = () => {
   }, []);
 
   // Manejamos el clic del video con useCallback para mejor rendimiento
-  const handleVideoClick = useCallback((videoId, event) => {
-    const imageContainer = event.target;
+  const handleVideoClick = useCallback((videoId: string, event: React.MouseEvent<HTMLImageElement>) => {
+    const imageContainer = event.target as HTMLElement;
     
     const iframe = document.createElement('iframe');
     iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
@@ -46,25 +57,20 @@ const BJProducciones = () => {
     };
   }, []);
 
-  // Manejamos la animación del logo
+  // Manejamos la animación del logo usando los frames importados
   useEffect(() => {
-    let intervalo;
-    const animation = document.getElementById("logo-animated");
+    let intervalo: number | undefined;
+    const animation = document.getElementById("logo-animated") as HTMLImageElement;
     if (!animation) return;
 
     const animar = () => {
-      setAnimationFrame(prev => {
-        const nextFrame = prev < totalFrames ? prev + 1 : 1;
-        animation.src = `/animate-logo/frame-${nextFrame}.png`;
-        return nextFrame;
-      });
+      setAnimationFrame(prev => (prev + 1) % totalFrames);
     };
 
     const iniciarAnimacion = () => {
       clearInterval(intervalo);
-      setAnimationFrame(1);
-      animation.src = `/animate-logo/frame-1.png`;
-      intervalo = setInterval(animar, 1000 / 20);
+      setAnimationFrame(0);
+      intervalo = window.setInterval(animar, 1000 / 20);
     };
 
     animation.addEventListener('click', iniciarAnimacion);
@@ -118,7 +124,7 @@ const BJProducciones = () => {
                 <div className="w-full md:w-2/5 flex justify-center order-2 md:order-2 mb-6 md:mb-0">
                   <div className="relative inline-block">
                     <img 
-                      src={`/animate-logo/frame-${animationFrame}.png`} 
+                      src={frames[animationFrame]} 
                       alt="Animación" 
                       id='logo-animated'
                       className="w-48 sm:w-56 md:w-64 lg:w-72 rounded-4xl shadow-lg hover:scale-105 transition-transform mx-auto"
@@ -148,7 +154,7 @@ const BJProducciones = () => {
                           className="w-full h-auto object-cover rounded cursor-pointer hover:scale-105 transition-transform"
                           onClick={(e) => handleVideoClick(video.id, e)}
                         />
-                        <h3 className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-gray-800 mt-2 text-center line-clamp-2">{video.title}</h3>
+                        <h3 className="text-sm md:text-base font-semibold mt-2 text-gray-800 line-clamp-2">{video.title}</h3>
                       </div>
                     ))}
                   </div>
@@ -157,7 +163,7 @@ const BJProducciones = () => {
             </div>
         </div>
     </main>
-    );
-  };
+  );
+};
 
-  export default BJProducciones;
+export default BJProducciones;

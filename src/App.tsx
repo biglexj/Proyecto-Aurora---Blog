@@ -3,8 +3,8 @@ import './App.css'
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import DarkMode from "./components/dark-mode/DarkMode";
-import Home from './pages/home/home';
+import DarkMode from "@components/dark-mode/DarkMode";
+import Home from './pages/home/Home';
 import Login from './pages/Auth/login/login';
 import Register from './pages/Auth/register/register';
 import Terms from './pages/Terms/Terms';

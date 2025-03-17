@@ -1,11 +1,12 @@
 import React from 'react';
-import youtube from '/logos/YouTube/youtube.svg';
-import tiktok from '/logos/TikTok/tiktokwhite.svg';
-import facebook from '/logos/Facebook/facebook.svg';
-import instagram from '/logos/Instagram/instagram.svg';
-import discord from '/logos/Discord/discordwhite.svg';
+// Usar importaciones con type assertion
+const youtube = '/logos/YouTube/youtube.svg';
+const tiktok = '/logos/TikTok/tiktokwhite.svg';
+const facebook = '/logos/Facebook/facebook.svg';
+const instagram = '/logos/Instagram/instagram.svg';
+const discord = '/logos/Discord/discordwhite.svg';
 
-const SocialLinks = () => {
+const SocialLinks: React.FC = () => {
   return (
     <footer className="bg-green-creativity-500 mt-6 py-6 md:py-8 rounded-2xl">
       <h3 className="text-2xl md:text-4xl text-center mb-6 md:mb-8">Sígueme en mis redes sociales</h3>

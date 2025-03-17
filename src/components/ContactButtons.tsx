@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ContactButtons = () => {
+const ContactButtons: React.FC = () => {
   return (
     <div className="contact w-80">
       <h2 className="contact text-3xl font-bold text-center mb-4">Para comunicarte</h2>

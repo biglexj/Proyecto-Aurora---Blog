@@ -1,14 +1,22 @@
 import React, { useState, useEffect, useCallback } from 'react';
 
-const Carousel = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [projectsData, setProjectsData] = useState([]);
-  const [itemsPerView, setItemsPerView] = useState(3);
+interface Project {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+}
+
+const Carousel: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [projectsData, setProjectsData] = useState<Project[]>([]);
+  const [itemsPerView, setItemsPerView] = useState<number>(3);
   
   useEffect(() => {
     fetch('/data/carousel.json')
       .then(response => response.json())
-      .then(data => setProjectsData(data))
+      .then((data: Project[]) => setProjectsData(data))
       .catch(error => console.error('Error loading projects:', error));
   }, []);
 

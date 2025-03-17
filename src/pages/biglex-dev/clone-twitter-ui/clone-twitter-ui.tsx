@@ -2,19 +2,19 @@ import React, { useEffect, useState } from 'react';
 import html2canvas from 'html2canvas';
 import logo from '/Marca/@biglexj/biglexj.jpg';
 
-const CloneTwitterUI = () => {
-  const [currentDate, setCurrentDate] = useState('');
-  const [name, setName] = useState('Biglex J');
-  const [username, setUsername] = useState('@biglexdev');
-  const [message, setMessage] = useState('Desarrollando ideas, creando soluciones 💻✨');
-  const [hashtags, setHashtags] = useState('#Developer #WebDev #JavaScript');
+const CloneTwitterUI: React.FC = () => {
+  const [currentDate, setCurrentDate] = useState<string>('');
+  const [name, setName] = useState<string>('Biglex J');
+  const [username, setUsername] = useState<string>('@biglexdev');
+  const [message, setMessage] = useState<string>('Desarrollando ideas, creando soluciones 💻✨');
+  const [hashtags, setHashtags] = useState<string>('#Developer #WebDev #JavaScript');
 
   useEffect(() => {
     const date = new Date();
     setCurrentDate(getFormattedDate(date));
   }, []);
 
-  const getFormattedDate = (date) => {
+  const getFormattedDate = (date: Date): string => {
     const hour = date.getHours();
     const minutes = date.getMinutes();
     const day = date.getDate();
@@ -27,14 +27,14 @@ const CloneTwitterUI = () => {
     return `${formattedHour}:${formattedMinutes} · ${day} ${month}. ${year}`;
   };
 
-  const captureAndSave = () => {
-    const tweetContainer = document.querySelector('.tweet-container');
+  const captureAndSave = (): void => {
+    const tweetContainer = document.querySelector('.tweet-container') as HTMLElement;
     if (tweetContainer) {
       const editableElements = tweetContainer.querySelectorAll('input, textarea');
       // Temporarily disable contentEditable for clean capture
       editableElements.forEach(el => {
-        el.style.border = 'none';
-        el.style.background = 'transparent';
+        (el as HTMLElement).style.border = 'none';
+        (el as HTMLElement).style.background = 'transparent';
       });
 
       html2canvas(tweetContainer).then((canvas) => {
@@ -45,12 +45,13 @@ const CloneTwitterUI = () => {
 
         // Restore editable styles
         editableElements.forEach(el => {
-          el.style.border = '';
-          el.style.background = '';
+          (el as HTMLElement).style.border = '';
+          (el as HTMLElement).style.background = '';
         });
       });
     }
   };
+  
   return (
     <main className="w-full">
       <div className="flex flex-col items-center p-5 md:p-10 rounded-2xl">
@@ -66,14 +67,14 @@ const CloneTwitterUI = () => {
                 <input
                   type="text"
                   value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => setName(e.target.value)}
                   className="font-bold bg-transparent border-none focus:outline-none focus:ring-0 text-white w-fit"
                   placeholder="Name"
                 />
                 <input
                   type="text"
                   value={username}
-                  onChange={(e) => setUsername(e.target.value)}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => setUsername(e.target.value)}
                   className="text-gray-500 text-sm bg-transparent border-none focus:outline-none focus:ring-0 w-fit"
                   placeholder="@username"
                 />
@@ -81,7 +82,7 @@ const CloneTwitterUI = () => {
 
               <textarea
                 value={message}
-                onChange={(e) => setMessage(e.target.value)}
+                onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setMessage(e.target.value)}
                 className="w-full bg-transparent border-none focus:outline-none focus:ring-0 mt-1 text-[15px] leading-normal whitespace-pre-wrap"
                 style={{ resize: 'none', overflow: 'hidden' }}
                 rows={message.split('\n').length}
@@ -90,7 +91,7 @@ const CloneTwitterUI = () => {
               <input
                 type="text"
                 value={hashtags}
-                onChange={(e) => setHashtags(e.target.value)}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setHashtags(e.target.value)}
                 className="w-full bg-transparent border-none focus:outline-none focus:ring-0 text-[#1d9bf0] text-[15px] whitespace-pre-wrap break-words"
                 placeholder="#hashtags"
               />

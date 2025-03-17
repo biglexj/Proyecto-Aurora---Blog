@@ -2,23 +2,48 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './popipoo.css';
 // Update the import path to use the correct relative path
-import ChanelPerfil from '@components/ChanelPerfil.jsx';
+import ChanelPerfil from '@components/ChanelPerfil';
 
-const Popipoo = () => {
-  const [channelsData, setChannelsData] = useState([]);
+interface ChannelContent {
+  name: string;
+  icon: string;
+  subscribers: string;
+  id: string;
+  link: string;
+  content: string[];
+}
+
+interface Channel {
+  video: string;
+  channelId: string;
+  channel: ChannelContent;
+  description: string;
+}
+
+// Instead of extending HTMLAttributes, create a custom interface
+interface ItemProps {
+  '--position': number;
+  '--quantity': number;
+  [key: string]: string | number;
+}
+
+const Popipoo: React.FC = () => {
+  const [channelsData, setChannelsData] = useState<Channel[]>([]);
   const totalChannels = channelsData.length;
 
   useEffect(() => {
     // Changed to use channel-pages-yt.json instead of channel-yt.json
     fetch('/data/channel-pages-yt.json')
       .then(response => response.json())
-      .then(data => setChannelsData(data))
+      .then((data: Channel[]) => setChannelsData(data))
       .catch(error => console.error('Error loading channels:', error));
   }, []);
 
-  const handleClick = (e) => {
+  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
     const slider = e.currentTarget.closest('.slider');
-    slider.classList.toggle('paused');
+    if (slider) {
+      slider.classList.toggle('paused');
+    }
   };
   
   return (
@@ -39,7 +64,7 @@ const Popipoo = () => {
               style={{
                 '--position': index + 1,
                 '--quantity': totalChannels
-              }}
+              } as React.CSSProperties & ItemProps}
             >
               <div className="bg-white p-3 md:p-6 lg:p-7 rounded-lg shadow-md w-full">
                 <div className="flex flex-col sm:flex-row items-center gap-2 md:gap-4 lg:gap-5 mb-3 md:mb-4 lg:mb-5">

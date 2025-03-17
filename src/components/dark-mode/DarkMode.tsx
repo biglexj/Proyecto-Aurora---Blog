@@ -1,10 +1,17 @@
 import { useEffect } from 'react';
 
+interface MouseEvent {
+  clientX: number;
+  clientY: number;
+}
+
 const DarkMode = () => {
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e: MouseEvent) => {
     const x = e.clientX;
     const y = e.clientY;
     const element = document.elementFromPoint(x, y);
+    
+    if (!element) return;
     
     // Obtener el color del elemento
     const computedStyle = window.getComputedStyle(element);

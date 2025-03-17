@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
+import svgr from 'vite-plugin-svgr'
 import path from 'path'
 import { fileURLToPath } from 'url'
 
@@ -12,7 +13,8 @@ const __dirname = path.dirname(__filename)
 export default defineConfig({
   plugins: [
     react(),
-    tailwindcss()
+    tailwindcss(),
+    svgr() // Añadir el plugin SVGR
   ],
   resolve: {
     alias: {
@@ -22,9 +24,12 @@ export default defineConfig({
       '@lib': path.resolve(__dirname, './src/lib'),
     },
   },
-  // Añade esta sección para manejar el enrutamiento del lado del cliente
+  // Configuración del servidor para manejar SPA routing
   server: {
-    historyApiFallback: true,
+    // For SPA routing, use the following instead of middlewareMode
+    fs: {
+      strict: true,
+    },
   },
   // Esto asegura un enrutamiento adecuado en la compilación de producción
   build: {

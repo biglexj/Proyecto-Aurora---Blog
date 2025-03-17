@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "/Marca/@biglexj/biglexj.svg";
 import SocialLinks from '@components/SocialLinks';
-import Carousel from "./carousel/carousel"
-import Popipoo from "./popipoo/popipoo"
+import Carousel from "./carousel/carousel";
+import Popipoo from "./popipoo/Popipoo";
 
-const Home = () => {
+const Home: React.FC = () => {
   return (
     <main className="min-h-screen text-primary-white">
       <div className="max-w-7xl mx-auto min-h-screen p-0">
