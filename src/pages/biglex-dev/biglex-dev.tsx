@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import logo from '/Marca/@biglexdev/biglexdev.svg';
 import ScriptColor from './script-color/script-color';
 import CloneTwitterUI from './clone-twitter-ui/clone-twitter-ui';
+import AduanaCalculator from './aduana-calculator/aduana';
 
 const Developer = () => {
     
@@ -57,6 +58,11 @@ const Developer = () => {
               <section className="color-generator h-auto mt-6 flex flex-col justify-center max-w-7xl mx-auto p-4 md:p-6 bg-coral-brand-300 rounded-2xl shadow-md">
                 <div className='w-full'>
                   <ScriptColor />
+                </div>
+              </section>
+              <section className="Aduana-Calculator h-auto mt-6 flex flex-col justify-center max-w-7xl mx-auto p-4 md:p-6 bg-violet-300 rounded-2xl shadow-md">
+                <div className='w-full'>
+                  <AduanaCalculator />
                 </div>
               </section>
             </div>          
