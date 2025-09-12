@@ -37,6 +37,37 @@
   --font-google-sans: "Google Sans", "sans-serif";
   --font-poppins: "Poppins", "sans-serif";
 
+  --color-onyx-0: #ffffff;
+  --color-onyx-50: #f6f6f6;
+  --color-onyx-100: #e7e7e7;
+  --color-onyx-200: #d1d1d1;
+  --color-onyx-300: #b0b0b0;
+  --color-onyx-400: #888888;
+  --color-onyx-500: #6d6d6d;
+  --color-onyx-600: #5d5d5d;
+  --color-onyx-700: #4f4f4f;
+  --color-onyx-800: #454545;
+  --color-onyx-900: #3d3d3d;
+  --color-onyx-950: #000000;
+  --color-onyx: #0f0f0f;
+
+  /* Colores Mine*/
+  --color-mine-shaft-50: #f6f6f6;
+  --color-mine-shaft-100: #e7e7e7;
+  --color-mine-shaft-200: #d1d1d1;
+  --color-mine-shaft-300: #b0b0b0;
+  --color-mine-shaft-400: #888888;
+  --color-mine-shaft-500: #6d6d6d;
+  --color-mine-shaft-600: #5d5d5d;
+  --color-mine-shaft-700: #4f4f4f;
+  --color-mine-shaft-800: #454545;
+  --color-mine-shaft-900: #3d3d3d;
+  --color-mine-shaft-950: #282828;
+
+  /* Colores de la paleta de colores - secundarios */
+  --color-error: #b3261e; /* hsl(4, 62%, 41%) */
+  --color-success: #1eb34a; /* hsl(135, 62%, 41%) */
+  
   /* Colores de la paleta de colores - primordiales del logo */
 
   /*Violeta*/
