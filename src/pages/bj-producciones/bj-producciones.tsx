@@ -148,33 +148,46 @@ const BJProducciones: React.FC = () => {
                 </div>
               </div>
             </section>
-  
-            <div className="mt-6 grid grid-cols-1 gap-6">
-              {Object.keys(videos).sort((a, b) => {
-                if (a === 'mas') return 1;
-                if (b === 'mas') return -1;
-                return a.localeCompare(b);
-              }).map((genero) => (
-                <div key={genero} className="box bg-violet-brand-300 rounded-2xl p-4 md:p-6 shadow-md">
-                  <h2 className="text-2xl md:text-4xl font-bold text-center mb-4 md:mb-8 text-gray-800">
-                    {genero === 'mas' ? 'Más Géneros' : genero.replace(/-/g, ' ').toUpperCase()}
-                  </h2>
-                  <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4">
-                    {videos[genero].map((video) => (
-                      <div key={video.id} className="video-content bg-white rounded-lg p-2 md:p-4 shadow">
+            
+          <div className="mt-6 grid grid-cols-1 gap-6">
+            {Object.keys(videos).sort((a, b) => {
+              if (a === 'mas') return 1;
+              if (b === 'mas') return -1;
+              return a.localeCompare(b);
+            }).map((genero) => (
+              <div key={genero} className="box bg-violet-brand-300 rounded-2xl p-4 md:p-6 shadow-md">
+                <h2 className="text-2xl md:text-4xl font-bold text-center mb-4 md:mb-8 text-gray-800">
+                  {genero === 'mas' ? 'Más Géneros' : genero.replace(/-/g, ' ').toUpperCase()}
+                </h2>
+                
+                {/* Grid mejorado con mejor responsividad */}
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 md:gap-4">
+                  {videos[genero].map((video) => (
+                    <div 
+                      key={video.id} 
+                      className="video-content bg-white rounded-lg p-2 md:p-3 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col h-full"
+                    >
+                      {/* Container de imagen con aspect ratio fijo */}
+                      <div className="relative w-full aspect-video mb-2 overflow-hidden rounded">
                         <img
                           src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`}
                           alt={video.title}
-                          className="w-full h-auto object-cover rounded cursor-pointer hover:scale-105 transition-transform"
+                          className="absolute inset-0 w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-200"
                           onClick={(e) => handleVideoClick(video.id, e)}
+                          loading="lazy"
                         />
-                        <h3 className="text-sm md:text-base font-semibold mt-2 text-gray-800 line-clamp-2">{video.title}</h3>
                       </div>
-                    ))}
-                  </div>
+                      
+                      {/* Título con altura flexible */}
+                      <h3 className="text-xs sm:text-sm md:text-base font-semibold text-gray-800 line-clamp-2 flex-1">
+                        {video.title}
+                      </h3>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
+          </div>
         </div>
     </main>
   );
