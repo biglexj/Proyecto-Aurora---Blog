@@ -1,0 +1,58 @@
+[
+    {
+        "video": "01",
+        "title": "A Que Volviste - Armonía 10",
+        "id": "tO4eQ3mWx7c",
+        "description": "A Que Volviste - Armonía 10, una emblemática pieza de cumbia norteña.",
+        "tags": ["cumbia", "armonía-10"]
+    },
+    {
+        "video": "02",
+        "title": "Cariñito - Mauricio Mesones",
+        "id": "71syr7GU7BU",
+        "description": "Cariñito - Mauricio Mesones, una emblemática pieza de cumbia peruana.",
+        "tags": ["cumbia", "mauricio-mesones"]
+    },
+    {
+        "video": "03",
+        "title": "Cuerpo de Sirena - Papillón",
+        "id": "N3F9qvRYc1Q",
+        "description": "Cuerpo de Sirena - Papillón, una emblemática pieza de cumbia.",
+        "tags": ["cumbia", "papillón"]
+    },
+    {
+        "video": "04",
+        "title": "La Duda - Armonía 10",
+        "id": "UHxudj1Si_4",
+        "description": "La Duda - Armonía 10, una emblemática pieza de cumbia.",
+        "tags": ["cumbia", "armonía-10"]
+    },
+    {
+        "video": "05",
+        "title": "Mi Cariñito - Sonido 2000",
+        "id": "2yIyeecsO1Q",
+        "description": "Mi Cariñito - Sonido 2000, una emblemática pieza de cumbia.",
+        "tags": ["cumbia", "sonido-2000"]
+    },
+    {
+        "video": "06",
+        "title": "Mix Dejar De Amarte - Azucena Calvay y Orquesta",
+        "id": "cPYIgfyhNl8",
+        "description": "Mix Dejar De Amarte - Azucena Calvay y Orquesta, una emotiva pieza de cumbia.",
+        "tags": ["cumbia", "azucena-calvay", "orquesta"]
+    },
+    {
+        "video": "07",
+        "title": "Partido en Dos - La Única Tropical",
+        "id": "dN943W7HoNY",
+        "description": "Partido en Dos - La Única Tropical, una emotiva pieza de cumbia.",
+        "tags": ["cumbia", "la-única-tropical"]
+    },
+    {
+        "video": "08",
+        "title": "Basta Corazón No Llores - Agrupación Lérida",
+        "id": "hVahihHpIDs",
+        "description": "Basta Corazón No Llores - Agrupación Lérida, una emotiva pieza de cumbia.",
+        "tags": ["cumbia", "agrupación-lérida"]
+    }
+]

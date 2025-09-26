@@ -1,0 +1,65 @@
+[
+    {
+        "video": "01",
+        "title": "Black Rover - Vickeblanka",
+        "id": "I0TlZDkQY-o",
+        "description": "Black Rover - Vickeblanka, una energética pieza de j-pop y anime.",
+        "tags": ["j-pop", "anime", "vickeblanka"]
+    },
+    {
+        "video": "02",
+        "title": "Bling-Bang-Bang-Born - Creepy Nuts",
+        "id": "bW8OgU6Es4E",
+        "description": "Bling-Bang-Bang-Born - Creepy Nuts, una energética pieza de j-pop y anime.",
+        "tags": ["j-pop", "anime", "creepy-nuts"]
+    },
+    {
+        "video": "03",
+        "title": "Haruka - Lacco Tower",
+        "id": "16ojnYt6GA8",
+        "description": "Haruka - Lacco Tower, una emotiva pieza de J-Pop y anime.",
+        "tags": ["j-pop", "anime", "lacco-tower"]
+    },
+    {
+        "video": "04",
+        "title": "Mi Corazón Encantado - Field of View",
+        "id": "NzTr2HV4xI8",
+        "description": "Mi Corazón Encantado - Field of View, una emblemática pieza de j-pop y anime.",
+        "tags": ["j-pop", "anime", "field-of-view"]
+    },
+    {
+        "video": "05",
+        "title": "Rabbit Hole - DECO*27",
+        "id": "g6o7sJRQYOI",
+        "description": "Rabbit Hole - DECO*27 (Instrumental), una energética pieza de j-pop y anime.",
+        "tags": ["j-pop", "anime", "deco-27"]
+    },
+    {
+        "video": "06",
+        "title": "Shikairo Days - Shikanoko",
+        "id": "4Z-CcUourjI",
+        "description": "Shikairo Days - Shikanoko (Instrumental), una energética pieza de j-pop y anime.",
+        "tags": ["j-pop", "anime", "shikanoko"]
+    },
+    {
+        "video": "07",
+        "title": "Sparkle - Radwimps",
+        "id": "L8rUB_OamW0",
+        "description": "Sparkle - Radwimps, una emblemática pieza de j-pop y anime.",
+        "tags": ["j-pop", "anime", "radwimps"]
+    },
+    {
+        "video": "08",
+        "title": "Usubeni - Lacco Tower",
+        "id": "uUzyod0KQDI",
+        "description": "Usubeni - Lacco Tower, una emotiva pieza de J-Pop y anime.",
+        "tags": ["j-pop", "anime", "lacco-tower"]
+    },
+    {
+        "video": "09",
+        "title": "Zenzenzense - RADWIMPS",
+        "id": "watejMT5lzY",
+        "description": "Zenzenzense - RADWIMPS, una emblemática pieza de j-pop y anime.",
+        "tags": ["j-pop", "anime", "radwimps"]
+    }
+]

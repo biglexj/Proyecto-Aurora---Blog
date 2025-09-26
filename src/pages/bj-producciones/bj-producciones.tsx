@@ -18,22 +18,36 @@ const BJProducciones: React.FC = () => {
   const [animationFrame, setAnimationFrame] = useState<number>(0);
   const totalFrames = frames.length;
 
-  // Fetch videos data from public directory
   useEffect(() => {
-    fetch('/data/yt-videos.json')
-      .then(response => response.json())
-      .then((videosData: Video[]) => {
-        const videosByGenre: VideosByGenre = {};
-        videosData.forEach(video => {
-          const primaryTag = video.tags[0];
-          if (!videosByGenre[primaryTag]) {
-            videosByGenre[primaryTag] = [];
-          }
-          videosByGenre[primaryTag].push(video);
-        });
-        setVideos(videosByGenre);
-      })
-      .catch(error => console.error('Error loading videos:', error));
+    const genres = [
+      'cumbia-sureña',
+      'cumbia-sanjuanera',
+      'cumbia',
+      'huayno',
+      'huayno-norteño',
+      'huayno-sureño',
+      'caporal'
+      ///'pop',
+      //'rap',
+      //'j-pop',
+      //'metal',
+      //'mas'
+    ];
+
+    const fetchAllVideos = async () => {
+      const videosByGenre: VideosByGenre = {};
+      for (const genre of genres) {
+        try {
+          const response = await fetch(`/data/bj-producciones/${genre}.json`);
+          videosByGenre[genre] = await response.json();
+        } catch (error) {
+          console.error(`Error loading videos for genre ${genre}:`, error);
+        }
+      }
+      setVideos(videosByGenre);
+    };
+
+    fetchAllVideos();
   }, []);
 
   // Manejamos el clic del video con useCallback para mejor rendimiento

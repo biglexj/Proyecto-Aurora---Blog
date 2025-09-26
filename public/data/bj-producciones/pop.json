@@ -1,0 +1,44 @@
+[
+    {
+        "video": "01",
+        "title": "Amor - Erick Elera",
+        "id": "RBv6xf9p45A",
+        "description": "Amor - Erick Elera, una vibrante pieza de pop.",
+        "tags": ["pop", "erick-elera"]
+    },
+    {
+        "video": "02",
+        "title": "Bugambilia - Nasa Histoires",
+        "id": "14pGqcVJq3M",
+        "description": "Bugambilia - Nasa Histoires, una emotiva pieza que fusiona jazz gitano y folk.",
+        "tags": ["pop", "jazz-gitano", "folk", "nasa-histoires"]
+    },
+    {
+        "video": "03",
+        "title": "First Love - Oscar Ortiz y Edgardo Núñez",
+        "id": "ZQzvQirwfjw",
+        "description": "First Love - Oscar Ortiz y Edgardo Núñez, una emotiva pieza de pop y música regional mexicana.",
+        "tags": ["pop", "música-regional-mexicana", "oscar-ortiz", "edgardo-núñez"]
+    },
+    {
+        "video": "04",
+        "title": "Mi Persona Favorita - Río Roma",
+        "id": "3ccsjUrwAXc",
+        "description": "Mi Persona Favorita - Río Roma, una emotiva balada pop.",
+        "tags": ["pop", "balada", "río-roma"]
+    },
+    {
+        "video": "05",
+        "title": "Night Dancer - Imase",
+        "id": "ceLEbMsyOBo",
+        "description": "Night Dancer - Imase, una vibrante pieza de pop.",
+        "tags": ["pop", "imase"]
+    },
+    {
+        "video": "06",
+        "title": "Si No Estás - Iñigo Quintero",
+        "id": "Levi62rDEkw",
+        "description": "Si No Estás - Iñigo Quintero, una emotiva balada pop. Versión no Karaoke",
+        "tags": ["pop", "iñigo-quintero"]
+    }
+]

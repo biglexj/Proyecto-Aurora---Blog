@@ -82,3 +82,6 @@ Para cualquier consulta o soporte, puedes contactarme a través de:
 - **Telegram**: [biglexrv](https://t.me/biglexrv)
 
 ¡Gracias por visitar el Proyecto Aurora - Blog!
+<p align="left">
+  <a href="https://www.buymeacoffee.com/biglexj" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="40"></a>
+</p>

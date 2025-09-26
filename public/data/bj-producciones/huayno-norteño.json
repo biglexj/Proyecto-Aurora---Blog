@@ -1,0 +1,44 @@
+﻿[
+    {
+        "video": "01",
+        "title": "Mala Tú - Víctor Manuel",
+        "id": "jr_4urB68rY",
+        "description": "Mala Tú - Víctor Manuel, una vibrante pieza de huayno-norteño.",
+        "tags": ["huayno-norteño", "víctor-manuel"]
+    },
+    {
+        "video": "02",
+        "title": "El Aventurero - Víctor Manuel",
+        "id": "dXVZoYtDB-A",
+        "description": "El Aventurero - Víctor Manuel, una vibrante pieza de huayno y huayno-norteño.",
+        "tags": ["huayno-norteño", "víctor-manuel"]
+    },
+    {
+        "video": "03",
+        "title": "El Huevo de Mi Vecina - Los Campesinos de Bambamarca",
+        "id": "iAuMMRxEAuk",
+        "description": "El Huevo de Mi Vecina - Los Campesinos de Bambamarca, una vibrante pieza de huayno y huayno-norteño.",
+        "tags": ["huayno-norteño", "los-campesinos-de-bambamarca"]
+    },
+    {
+        "video": "04",
+        "title": "La Chismosa - Los Campesinos de Bambamarca",
+        "id": "zGU368kTAA8",
+        "description": "La Chismosa - Los Campesinos de Bambamarca, una vibrante pieza de huayno y huayno-norteño.",
+        "tags": ["huayno-norteño", "los-campesinos-de-bambamarca"]
+    },
+    {
+        "video": "05",
+        "title": "Que Te Pasa - String Karma",
+        "id": "Kp1JwI7Fu3w",
+        "description": "Que Te Pasa - String Karma, una vibrante pieza de huayno norteño.",
+        "tags": ["huayno-norteño", "string-karma"]
+    },
+    {
+        "video": "06",
+        "title": "Cajamarquina - String Karma",
+        "id": "ZA0TYqQMI3U",
+        "description": "Cajamarquina - String Karma, una vibrante pieza de huayno norteño.",
+        "tags": ["huayno-norteño", "string-karma"]
+    }
+]

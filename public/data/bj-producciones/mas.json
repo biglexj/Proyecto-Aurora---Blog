@@ -1,0 +1,23 @@
+﻿[
+    {
+        "video": "01",
+        "title": "17 Años - Los Ángeles Azules ft. Jay De La Cueva",
+        "id": "lJnixdpd1jg",
+        "description": "17 Años - Los Ángeles Azules ft. Jay De La Cueva, una emblemática pieza de cumbia sonidera.",
+        "tags": ["mas", "cumbia-sonidera", "los-ángeles-azules", "jay-de-la-cueva"]
+    },
+    {
+        "video": "02",
+        "title": "Si No Estás - Iñigo Quintero",
+        "id": "FU0T0XX6uTw",
+        "description": "Si No Estás - Iñigo Quintero, una emotiva balada pop. Versión no Karaoke",
+        "tags": ["mas", "balada", "iñigo-quintero"]
+    },
+    {
+        "video": "03",
+        "title": "Ahora Mírame - Ulises Bueno",
+        "id": "lrvDbAOp6ps",
+        "description": "Ahora Mírame - Ulises Bueno, una emotiva pieza de cuarteto.",
+        "tags": ["mas", "cuarteto", "ulises-bueno"]
+    }
+]
